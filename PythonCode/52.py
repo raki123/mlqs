@@ -15,7 +15,7 @@ from scipy.cluster.hierarchy import dendrogram
 
 DataViz = VisualizeDataset()
 
-dataset = pd.read_csv('./intermediate_datafiles/chapter4_result.csv', index_col=0)
+dataset = pd.read_csv('./intermediate_datafiles-own/chapter4_result-own.csv', index_col=0)
 dataset.index = dataset.index.to_datetime()
 
 # First let us use non hierarchical clustering.
