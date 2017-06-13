@@ -1,4 +1,5 @@
 from util.VisualizeDataset import VisualizeDataset
+import sys
 from Chapter5.DistanceMetrics import InstanceDistanceMetrics
 from Chapter5.DistanceMetrics import PersonDistanceMetricsNoOrdering
 from Chapter5.DistanceMetrics import PersonDistanceMetricsOrdering
@@ -8,7 +9,7 @@ import copy
 import pandas as pd
 import matplotlib.pyplot as plot
 import util.util as util
-
+from scipy.cluster.hierarchy import dendrogram
 
 # Of course we repeat some stuff from Chapter 3, namely to load the dataset
 
@@ -88,21 +89,55 @@ clusteringH = HierarchicalClustering()
 k_values = range(2, 10)
 silhouette_values = []
 
+def plot_dendrogram(dataset, linkage, k):
+    sys.setrecursionlimit(40000)
+    plot.title('Hierarchical Clustering Dendrogram')
+    plot.xlabel('time points')
+    plot.ylabel('distance')
+    times = dataset.index.strftime('%H:%M:%S')
+    dendrogram(linkage,truncate_mode='lastp',p=k, show_leaf_counts=True, leaf_rotation=45.,leaf_font_size=8.,show_contracted=True, labels=times)
+    plot.show()
+
 # Do some initial runs to determine the right number for the maximum number of clusters.
 
 print '===== agglomaritive clustering ====='
+
 for k in k_values:
     print 'k = ', k
-    dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 5, 'euclidean', use_prev_linkage=True, link_function='ward')
+    dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], k, 'euclidean', use_prev_linkage=True, link_function='ward')
     silhouette_score = dataset_cluster['silhouette'].mean()
     print 'silhouette = ', silhouette_score
     silhouette_values.append(silhouette_score)
   #  if k == k_values[0]:
-    DataViz.plot_dendrogram(dataset_cluster, l)
+    #plot_dendrogram(dataset_cluster, l, k)
 
 plot.plot(k_values, silhouette_values, 'b-')
 plot.ylim([0,1])
 plot.xlabel('max number of clusters')
 plot.ylabel('silhouette score')
 plot.show()
+
+silhouette_values = []
+print '===== parameter testing ====='
+
+print '2p = ', 0
+dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 10, 'manhattan', use_prev_linkage=False, link_function='complete')
+silhouette_score = dataset_cluster['silhouette'].mean()
+print 'silhouette = ', silhouette_score
+silhouette_values.append(silhouette_score)
+plot_dendrogram(dataset_cluster, l, 16)
+for p in range(1,10):
+    print '2p = ', p
+    dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 10, 'minkowski', p = p*0.5, use_prev_linkage=False, link_function='complete')
+    silhouette_score = dataset_cluster['silhouette'].mean()
+    print 'silhouette = ', silhouette_score
+    silhouette_values.append(silhouette_score)
+    plot_dendrogram(dataset_cluster, l, 16)
+
+plot.plot(range(10), silhouette_values, 'b-')
+plot.ylim([0,1])
+plot.xlabel('p used for minkowski')
+plot.ylabel('silhouette score')
+plot.show()
+
 

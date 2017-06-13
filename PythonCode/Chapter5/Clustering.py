@@ -18,6 +18,7 @@ from Chapter5.DistanceMetrics import PersonDistanceMetricsOrdering
 import random
 import scipy
 from scipy.cluster.hierarchy import linkage, fcluster
+from scipy.spatial.distance import pdist
 from sklearn.neighbors import DistanceMetric
 import pyclust
 
@@ -305,9 +306,9 @@ class HierarchicalClustering:
         if (not use_prev_linkage) or (self.link is None):
             # Perform the clustering process according to the specified distance metric.
             if distance_metric == df.minkowski:
-                self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='minkowski', p=p)
+                self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric= lambda x,y : pdist([x,y], 'minkowski', p)[0])
             elif distance_metric == df.manhattan:
-                self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='manhattan')
+                self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='cityblock')
             else:
                 self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='euclidean')
 
