@@ -22,7 +22,7 @@ dataset.index = dataset.index.to_datetime()
 clusteringNH = NonHierarchicalClustering()
 
 # Let us look at k-means first.
-
+'''
 k_values = range(2, 10)
 silhouette_values = []
 #
@@ -82,7 +82,7 @@ DataViz.plot_silhouette(dataset_kmed, 'cluster', 'silhouette')
 util.print_latex_statistics_clusters(dataset_kmed, 'cluster', ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 'label')
 
 # And the hierarchical clustering is the last one we try
-
+'''
 clusteringH = HierarchicalClustering()
 
 k_values = range(2, 10)
@@ -97,8 +97,8 @@ for k in k_values:
     silhouette_score = dataset_cluster['silhouette'].mean()
     print 'silhouette = ', silhouette_score
     silhouette_values.append(silhouette_score)
-    if k == k_values[0]:
-        DataViz.plot_dendrogram(dataset_cluster, l)
+  #  if k == k_values[0]:
+    DataViz.plot_dendrogram(dataset_cluster, l)
 
 plot.plot(k_values, silhouette_values, 'b-')
 plot.ylim([0,1])
