@@ -15,15 +15,15 @@ from scipy.cluster.hierarchy import dendrogram
 
 DataViz = VisualizeDataset()
 
-dataset = pd.read_csv('./intermediate_datafiles/chapter4_result.csv', index_col=0)
+dataset = pd.read_csv('./intermediate_datafiles-own/chapter4_result-own.csv', index_col=0)
 dataset.index = dataset.index.to_datetime()
 
 # First let us use non hierarchical clustering.
 
 clusteringNH = NonHierarchicalClustering()
-'''
-# Let us look at k-means first.
 
+# Let us look at k-means first.
+'''
 k_values = range(2, 10)
 silhouette_values = []
 #
@@ -108,8 +108,8 @@ for k in k_values:
     silhouette_score = dataset_cluster['silhouette'].mean()
     print 'silhouette = ', silhouette_score
     silhouette_values.append(silhouette_score)
-    if k == k_values[0]:
-        plot_dendrogram(dataset_cluster, l, k)
+  #  if k == k_values[0]:
+    #plot_dendrogram(dataset_cluster, l, k)
 
 plot.plot(k_values, silhouette_values, 'b-')
 plot.ylim([0,1])
@@ -119,23 +119,24 @@ plot.show()
 
 silhouette_values = []
 print '===== parameter testing ====='
-print '2p = ', "inf"
-dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 5, 'chebyshev', use_prev_linkage=False, link_function='complete')
+
+print '2p = ', 0
+dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 10, 'manhattan', use_prev_linkage=False, link_function='complete')
 silhouette_score = dataset_cluster['silhouette'].mean()
 print 'silhouette = ', silhouette_score
 silhouette_values.append(silhouette_score)
 plot_dendrogram(dataset_cluster, l, 16)
-for p in range(2,10):
+for p in range(1,10):
     print '2p = ', p
-    dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 5, 'minkowski', p = p*0.5, use_prev_linkage=False, link_function='complete')
+    dataset_cluster, l = clusteringH.agglomerative_over_instances(copy.deepcopy(dataset), ['gyr_phone_x', 'gyr_phone_y', 'gyr_phone_z'], 10, 'minkowski', p = p*0.5, use_prev_linkage=False, link_function='complete')
     silhouette_score = dataset_cluster['silhouette'].mean()
     print 'silhouette = ', silhouette_score
     silhouette_values.append(silhouette_score)
     plot_dendrogram(dataset_cluster, l, 16)
 
-plot.plot(range(2,10), silhouette_values, 'b-')
+plot.plot(range(10), silhouette_values, 'b-')
 plot.ylim([0,1])
-plot.xlabel('2p of p used for minkowski')
+plot.xlabel('p used for minkowski')
 plot.ylabel('silhouette score')
 plot.show()
 
