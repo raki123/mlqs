@@ -1,1 +1,6 @@
 *.csv filter=lfs diff=lfs merge=lfs -text
+intermediate_datafiles-own/chapter2_result-own.csv filter=lfs diff=lfs merge=lfs -text
+intermediate_datafiles-own/chapter3_result_final-own.csv filter=lfs diff=lfs merge=lfs -text
+intermediate_datafiles-own/chapter3_result_outliers-own.csv filter=lfs diff=lfs merge=lfs -text
+intermediate_datafiles-own/chapter3_result_outliers.csv filter=lfs diff=lfs merge=lfs -text
+intermediate_datafiles-own/chapter4_result.csv filter=lfs diff=lfs merge=lfs -text
