@@ -309,6 +309,8 @@ class HierarchicalClustering:
                 self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric= lambda x,y : pdist([x,y], 'minkowski', p)[0])
             elif distance_metric == df.manhattan:
                 self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='cityblock')
+            elif distance_metric == 'chebyshev':
+                self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='chebyshev')
             else:
                 self.link = linkage(temp_dataset.as_matrix(), method=link_function, metric='euclidean')
 
