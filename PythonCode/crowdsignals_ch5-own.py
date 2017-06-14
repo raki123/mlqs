@@ -1,4 +1,4 @@
-##############################################################
+###############################################################
 #                                                            #
 #    Mark Hoogendoorn and Burkhardt Funk (2017)              #
 #    Machine Learning for the Quantified Self                #
