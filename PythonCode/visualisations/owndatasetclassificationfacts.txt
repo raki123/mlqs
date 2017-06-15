@@ -1,0 +1,7 @@
+Training set length is:  1442
+Test set length is:  619
+#basic features:  10
+#PCA features:  4
+#time features:  28
+#frequency features:  192
+#cluster features:  1
