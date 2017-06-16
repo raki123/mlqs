@@ -179,10 +179,13 @@ for i in range(0, len(possible_feature_sets)):
                       (performance_tr_knn, performance_tr_knn_std, performance_te_knn, performance_te_knn_std),
                       (performance_tr_dt, performance_tr_dt_std, performance_te_dt, performance_te_dt_std)]
     util.print_table_row_performances_regression(feature_names[i], len(selected_train_X.index), len(selected_test_X.index), scores_with_sd)
+    print "here?"
     scores_over_all_algs.append(scores_with_sd)
 
+print "Segmentation fault?"
 print scores_over_all_algs
+print feature_names
 DataViz.plot_performances_regression(['NN', 'RF', 'SVM', 'KNN', 'DT'], feature_names, scores_over_all_algs)
-
+print "We dont see this"
 regr_train_y, regr_test_y = learner.random_forest(train_X[features_after_chapter_5], train_y, test_X[features_after_chapter_5], gridsearch=True, print_model_details=True)
 DataViz.plot_numerical_prediction_versus_real(train_X.index, train_y, regr_train_y, test_X.index, test_y, regr_test_y, 'heart rate')

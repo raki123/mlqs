@@ -62,7 +62,7 @@ class TemporalClassificationAlgorithms:
     # W, and W_back.
 
 
-    def iinitialize_echo_state_network(self, inputs, outputs, reservoir):
+    def initialize_echo_state_network(self, inputs, outputs, reservoir):
 
         # http://minds.jacobs-university.de/mantas/code
         # Create random matrices.
@@ -75,7 +75,7 @@ class TemporalClassificationAlgorithms:
         W *= 1.25 / rhoW
         return Win, W, Wback
 
-    def initialize_echo_state_network(self, inputs, outputs, reservoir):
+    def iinitialize_echo_state_network(self, inputs, outputs, reservoir):
         Win = (np.random.rand(reservoir,1+inputs)-0.5) * 1
         W = np.random.rand(reservoir,reservoir)-0.5
         for i in range(reservoir):
