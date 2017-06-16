@@ -60,13 +60,29 @@ class TemporalClassificationAlgorithms:
     # This function initializes an echo state network given the specified number of
     # inputs, outputs, and nodes in the reservoir. It returns the weight matrices W_in,
     # W, and W_back.
-    def initialize_echo_state_network(self, inputs, outputs, reservoir):
+
+
+    def iinitialize_echo_state_network(self, inputs, outputs, reservoir):
 
         # http://minds.jacobs-university.de/mantas/code
         # Create random matrices.
         Win = (np.random.rand(reservoir,1+inputs)-0.5) * 1
         W = np.random.rand(reservoir,reservoir)-0.5
         Wback = (np.random.rand(reservoir,outputs)-0.5) * 1
+
+        # Adjust W to "guarantee" the echo state property.
+        rhoW = max(abs(linalg.eig(W)[0]))
+        W *= 1.25 / rhoW
+        return Win, W, Wback
+
+    def initialize_echo_state_network(self, inputs, outputs, reservoir):
+        Win = (np.random.rand(reservoir,1+inputs)-0.5) * 1
+        W = np.random.rand(reservoir,reservoir)-0.5
+        for i in range(reservoir):
+            dontkeep = np.random.choice(reservoir,size=3*reservoir/4, replace = False)
+            for j in dontkeep:
+                W[i,j] = 0
+                Wback = (np.random.rand(reservoir,outputs)-0.5) * 1
 
         # Adjust W to "guarantee" the echo state property.
         rhoW = max(abs(linalg.eig(W)[0]))

@@ -116,12 +116,12 @@ features_after_chapter_3 = list(set().union(basic_features, pca_features))
 features_after_chapter_4 = list(set().union(basic_features, pca_features, time_features, freq_features))
 features_after_chapter_5 = list(set().union(basic_features, pca_features, time_features, freq_features, cluster_features))
 
-fs = FeatureSelectionRegression()
-selected_features, ordered_features, ordered_scores = fs.forward_selection(10, train_X[features_after_chapter_5], train_y)
+#fs = FeatureSelectionRegression()
+#selected_features, ordered_features, ordered_scores = fs.forward_selection(10, train_X[features_after_chapter_5], train_y)
 
 #selected_features, ordered_features, ordered_scores = forward_selection(10, train_X, train_y)
-print selected_features
-#selected_features = ['gyr_phone_z', 'silhouette', 'mag_phone_x_temp_std_ws_120', 'acc_phone_x_freq_1.6_Hz_ws_40', 'gyr_phone_z_freq_1.0_Hz_ws_40', 'acc_phone_y_pse', 'mag_phone_y_freq_0.0_Hz_ws_40', 'mag_phone_z_freq_0.4_Hz_ws_40', 'acc_phone_z', 'acc_phone_z_freq_1.4_Hz_ws_40']
+#print selected_features
+selected_features = ['gyr_phone_z', 'mag_phone_x', 'pca_1', 'acc_phone_y_freq_1.4_Hz_ws_40', 'gyr_phone_y_freq_1.3_Hz_ws_40', 'acc_phone_z_freq_0.9_Hz_ws_40', 'mag_phone_y_freq_0.0_Hz_ws_40', 'mag_phone_y_freq_1.3_Hz_ws_40', 'gyr_phone_z_temp_std_ws_120', 'gyr_phone_y_pse']
 
 possible_feature_sets = [basic_features, features_after_chapter_3, features_after_chapter_4, features_after_chapter_5, selected_features]
 feature_names = ['initial set', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Selected features']
@@ -149,8 +149,9 @@ washout_time = 10
 
 scores_over_all_algs = []
 
-for i in [4]:
+for i in range(len(feature_names)):
 
+    print feature_names[i]
     selected_train_X = train_X[possible_feature_sets[i]]
     selected_test_X = test_X[possible_feature_sets[i]]
 
