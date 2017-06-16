@@ -30,11 +30,11 @@ DataViz = VisualizeDataset()
 
 # Read the result from the previous chapter, and make sure the index is of the type datetime.
 
-dataset_path = './intermediate_datafiles/'
-export_tree_path = 'Example_graphs/Chapter7/'
+dataset_path = './intermediate_datafiles-own/'
+export_tree_path = 'Example_graphs-own/Chapter7/'
 
 try:
-    dataset = pd.read_csv(dataset_path + 'chapter5_result.csv', index_col=0)
+    dataset = pd.read_csv(dataset_path + 'chapter5_result-own.csv', index_col=0)
 except IOError as e:
     print('File not found, try to run previous crowdsignals scripts first!')
     raise e
@@ -60,9 +60,8 @@ print 'Test set length is: ', len(test_X.index)
 
 # Select subsets of the features that we will consider:
 
-basic_features = ['acc_phone_x','acc_phone_y','acc_phone_z','acc_watch_x','acc_watch_y','acc_watch_z','gyr_phone_x','gyr_phone_y','gyr_phone_z','gyr_watch_x','gyr_watch_y','gyr_watch_z',
-                  'hr_watch_rate', 'light_phone_lux','mag_phone_x','mag_phone_y','mag_phone_z','mag_watch_x','mag_watch_y','mag_watch_z','press_phone_pressure']
-pca_features = ['pca_1','pca_2','pca_3','pca_4','pca_5','pca_6','pca_7']
+basic_features = ['acc_phone_x','acc_phone_y','acc_phone_z','gyr_phone_x','gyr_phone_y','gyr_phone_z','light_phone_lux','mag_phone_x','mag_phone_y','mag_phone_z']
+pca_features = ['pca_1','pca_2','pca_3','pca_4']
 time_features = [name for name in dataset.columns if '_temp_' in name]
 freq_features = [name for name in dataset.columns if (('_freq' in name) or ('_pse' in name))]
 print '#basic features: ', len(basic_features)
@@ -74,7 +73,6 @@ print '#cluster features: ', len(cluster_features)
 features_after_chapter_3 = list(set().union(basic_features, pca_features))
 features_after_chapter_4 = list(set().union(basic_features, pca_features, time_features, freq_features))
 features_after_chapter_5 = list(set().union(basic_features, pca_features, time_features, freq_features, cluster_features))
-
 
 # First, let us consider the performance over a selection of features:
 
