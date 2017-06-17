@@ -100,3 +100,32 @@ for dataset in [dataset, dataset1]:
 	test_cm = eval.confusion_matrix(test_y, class_test_y, class_train_prob_y.columns)
 
 	DataViz.plot_confusion_matrix(test_cm, class_train_prob_y.columns, normalize=False)
+
+	reg_parameters = [0.0001, 0.001, 0.01, 0.1, 1, 10]
+	performance_training = []
+	performance_test = []
+
+	# We repeat the experiment a number of times to get a bit more robust data as the initialization of the NN is random.
+
+	repeats = 20
+	for reg_param in reg_parameters:
+		performance_tr = 0
+		performance_te = 0
+    		for i in range(0, repeats):
+        		class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.feedforward_neural_network(train_X, train_y, test_X, hidden_layer_sizes=(250, ), alpha=reg_param, max_iter=500,gridsearch=False)
+			performance_tr += eval.accuracy(train_y, class_train_y)
+			performance_te += eval.accuracy(test_y, class_test_y)
+		performance_training.append(performance_tr/repeats)
+		performance_test.append(performance_te/repeats)
+		
+	plot.hold(True)
+	plot.semilogx(reg_parameters, performance_training, 'r-')
+	plot.semilogx(reg_parameters, performance_test, 'b:')
+	print performance_training
+	print performance_test
+	plot.xlabel('regularization parameter value')
+	plot.ylabel('accuracy')
+	plot.ylim([0.95, 1.01])
+	plot.legend(['training', 'test'], loc=4)
+	plot.hold(False)
+	plot.show()
