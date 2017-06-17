@@ -82,7 +82,7 @@ fs = FeatureSelectionClassification()
 features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
 print ordered_scores
 print ordered_features
-'''
+
 print "plotting"
 
 plot.plot(range(1, 51), ordered_scores)
@@ -92,10 +92,11 @@ plot.show()
 
 # Based on the plot we select the top 10 features.
 
-selected_features = ['['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'pca_4_temp_mean_ws_120', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'acc_phone_y_temp_mean_ws_120', 'gyr_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.2_Hz_ws_40', 'mag_phone_z_pse', 'gyr_phone_x_freq_1.7_Hz_ws_40', 'mag_phone_y_freq_0.1_Hz_ws_40', 'acc_phone_z_freq_0.6_Hz_ws_40', 'gyr_phone_z_freq_1.0_Hz_ws_40', 'acc_phone_x_freq_1.9_Hz_ws_40', 'gyr_phone_x_freq_0.5_Hz_ws_40', 'gyr_phone_y_freq_1.0_Hz_ws_40', 'acc_phone_y_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.9_Hz_ws_40', 'mag_phone_y_freq_1.1_Hz_ws_40', 'gyr_phone_x_freq_1.5_Hz_ws_40', 'acc_phone_x_freq_1.7_Hz_ws_40', 'gyr_phone_x_max_freq', 'mag_phone_z_freq_1.0_Hz_ws_40', 'gyr_phone_z_freq_0.5_Hz_ws_40', 'gyr_phone_z_freq_1.9_Hz_ws_40', 'mag_phone_z_freq_0.3_Hz_ws_40', 'gyr_phone_x_freq_0.9_Hz_ws_40', 'acc_phone_y_freq_0.5_Hz_ws_40', 'acc_phone_x_freq_0.3_Hz_ws_40', 'mag_phone_y_freq_0.2_Hz_ws_40', 'gyr_phone_x_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.8_Hz_ws_40', 'gyr_phone_z_temp_mean_ws_120', 'gyr_phone_z_temp_std_ws_120', 'gyr_phone_x_temp_std_ws_120', 'acc_phone_y_freq_1.4_Hz_ws_40', 'gyr_phone_y_max_freq', 'gyr_phone_x_freq_weighted', 'mag_phone_y_temp_mean_ws_120', 'gyr_phone_z_pse', 'acc_phone_y_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.2_Hz_ws_40', 'gyr_phone_z_freq_0.4_Hz_ws_40', 'acc_phone_y_freq_0.9_Hz_ws_40', 'gyr_phone_y_freq_0.0_Hz_ws_40', 'acc_phone_y_freq_weighted', 'mag_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_z_freq_1.6_Hz_ws_40']
-'''acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
-                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
-                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']'''
+selected_features = ['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'pca_4_temp_mean_ws_120']
+#'['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'pca_4_temp_mean_ws_120', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'acc_phone_y_temp_mean_ws_120', 'gyr_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.2_Hz_ws_40', 'mag_phone_z_pse', 'gyr_phone_x_freq_1.7_Hz_ws_40', 'mag_phone_y_freq_0.1_Hz_ws_40', 'acc_phone_z_freq_0.6_Hz_ws_40', 'gyr_phone_z_freq_1.0_Hz_ws_40', 'acc_phone_x_freq_1.9_Hz_ws_40', 'gyr_phone_x_freq_0.5_Hz_ws_40', 'gyr_phone_y_freq_1.0_Hz_ws_40', 'acc_phone_y_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.9_Hz_ws_40', 'mag_phone_y_freq_1.1_Hz_ws_40', 'gyr_phone_x_freq_1.5_Hz_ws_40', 'acc_phone_x_freq_1.7_Hz_ws_40', 'gyr_phone_x_max_freq', 'mag_phone_z_freq_1.0_Hz_ws_40', 'gyr_phone_z_freq_0.5_Hz_ws_40', 'gyr_phone_z_freq_1.9_Hz_ws_40', 'mag_phone_z_freq_0.3_Hz_ws_40', 'gyr_phone_x_freq_0.9_Hz_ws_40', 'acc_phone_y_freq_0.5_Hz_ws_40', 'acc_phone_x_freq_0.3_Hz_ws_40', 'mag_phone_y_freq_0.2_Hz_ws_40', 'gyr_phone_x_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.8_Hz_ws_40', 'gyr_phone_z_temp_mean_ws_120', 'gyr_phone_z_temp_std_ws_120', 'gyr_phone_x_temp_std_ws_120', 'acc_phone_y_freq_1.4_Hz_ws_40', 'gyr_phone_y_max_freq', 'gyr_phone_x_freq_weighted', 'mag_phone_y_temp_mean_ws_120', 'gyr_phone_z_pse', 'acc_phone_y_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.2_Hz_ws_40', 'gyr_phone_z_freq_0.4_Hz_ws_40', 'acc_phone_y_freq_0.9_Hz_ws_40', 'gyr_phone_y_freq_0.0_Hz_ws_40', 'acc_phone_y_freq_weighted', 'mag_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_z_freq_1.6_Hz_ws_40']
+#'acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
+#                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
+#                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
 
 # Let us first study the impact of regularization and model complexity: does regularization prevent overfitting?
 
@@ -241,4 +242,3 @@ class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.ran
 test_cm = eval.confusion_matrix(test_y, class_test_y, class_train_prob_y.columns)
 
 DataViz.plot_confusion_matrix(test_cm, class_train_prob_y.columns, normalize=False)
-'''
