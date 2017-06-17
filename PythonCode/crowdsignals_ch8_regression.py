@@ -84,7 +84,7 @@ dftest = adfuller(dataset['hr_watch_rate'], autolag='AIC')
 print dftest
 
 autocorrelation_plot(dataset['hr_watch_rate'])
-plot.show()
+#plot.show()
 
 # Now let us focus on the learning part.
 
