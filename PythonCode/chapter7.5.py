@@ -74,14 +74,16 @@ features_after_chapter_3 = list(set().union(basic_features, pca_features))
 features_after_chapter_4 = list(set().union(basic_features, pca_features, time_features, freq_features))
 features_after_chapter_5 = list(set().union(basic_features, pca_features, time_features, freq_features, cluster_features))
 
+print len(features_after_chapter_3)
+
 # First, let us consider the performance over a selection of features:
 
 fs = FeatureSelectionClassification()
 
-features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
+features, ordered_features, ordered_scores = fs.forward_selection(15, train_X[features_after_chapter_3], train_y)
 print ordered_scores
 print ordered_features
 print features
 
-features = fs.backward_selection(50, train_X[features_after_chapter_5], train_y)
+features = fs.backward_selection(15, train_X[features_after_chapter_3], train_y)
 print features
