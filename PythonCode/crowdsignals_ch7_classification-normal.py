@@ -65,12 +65,14 @@ basic_features = ['acc_phone_x','acc_phone_y','acc_phone_z','acc_watch_x','acc_w
 pca_features = ['pca_1','pca_2','pca_3','pca_4','pca_5','pca_6','pca_7']
 time_features = [name for name in dataset.columns if '_temp_' in name]
 freq_features = [name for name in dataset.columns if (('_freq' in name) or ('_pse' in name))]
+'''
 print '#basic features: ', len(basic_features)
 print '#PCA features: ', len(pca_features)
 print '#time features: ', len(time_features)
 print '#frequency features: ', len(freq_features)
 cluster_features = ['cluster']
 print '#cluster features: ', len(cluster_features)
+'''
 features_after_chapter_3 = list(set().union(basic_features, pca_features))
 features_after_chapter_4 = list(set().union(basic_features, pca_features, time_features, freq_features))
 features_after_chapter_5 = list(set().union(basic_features, pca_features, time_features, freq_features, cluster_features))
@@ -80,6 +82,7 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 
 fs = FeatureSelectionClassification()
 
+'''
 features, ordered_features, ordered_scores = fs.forward_selection(25, train_X[features_after_chapter_5], train_y)
 print ordered_scores
 print ordered_features
@@ -91,9 +94,10 @@ plot.show()
 
 # Based on the plot we select the top 10 features.
 
-selected_features = ['acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
-                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
-                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
+selected_features = features_after_chapter_5
+# ['acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
+#                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
+#                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
 
 # Let us first study the impact of regularization and model complexity: does regularization prevent overfitting?
 

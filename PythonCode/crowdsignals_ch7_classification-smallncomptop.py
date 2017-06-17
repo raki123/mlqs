@@ -34,7 +34,7 @@ dataset_path = './intermediate_datafiles/'
 export_tree_path = 'Example_graphs/Chapter7-smalln/'
 
 try:
-    dataset = pd.read_csv(dataset_path + 'smalldataset.csv', index_col=0)
+    dataset = pd.read_csv(dataset_path + 'smallncomparedtop.csv', index_col=0)
 except IOError as e:
     print('File not found, try to run previous crowdsignals scripts first!')
     raise e
@@ -80,6 +80,7 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 
 fs = FeatureSelectionClassification()
 
+'''
 features, ordered_features, ordered_scores = fs.forward_selection(25, train_X[features_after_chapter_5], train_y)
 print ordered_scores
 print ordered_features
@@ -88,12 +89,14 @@ plot.plot(range(1, 26), ordered_scores)
 plot.xlabel('number of features')
 plot.ylabel('accuracy')
 plot.show()
+'''
 
 # Based on the plot we select the top 10 features.
 
-selected_features = ['acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
-                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
-                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
+selected_features = ['acc_phone_y_freq_0.0_Hz_ws_40', 'mag_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'mag_watch_x_freq_0.0_Hz_ws_40']
+#'acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
+#                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
+#                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
 
 # Let us first study the impact of regularization and model complexity: does regularization prevent overfitting?
 

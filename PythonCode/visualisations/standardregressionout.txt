@@ -1,0 +1,1098 @@
+Training set length is:  1422
+Test set length is:  736
+#basic features:  28
+#PCA features:  7
+#time features:  71
+#frequency features:  432
+#cluster features:  1
+temp_pattern_labelOnTable  &  0.6158 \\\hline
+labelOnTable  &  0.6158 \\\hline
+temp_pattern_labelOnTable(b)labelOnTable  &  0.6158 \\\hline
+pca_2_temp_mean_ws_120  &  0.5265 \\\hline
+pca_1_temp_mean_ws_120  &  0.5221 \\\hline
+acc_watch_y_temp_mean_ws_120  &  0.5022 \\\hline
+pca_2  &  0.4980 \\\hline
+acc_phone_z_temp_mean_ws_120  &  0.4970 \\\hline
+acc_phone_z_freq_0.0_Hz_ws_40  &  0.4710 \\\hline
+pca_1  &  0.4691 \\\hline
+acc_watch_y_freq_0.0_Hz_ws_40  &  0.4687 \\\hline
+acc_phone_z  &  0.4581 \\\hline
+acc_watch_x_temp_mean_ws_120  &  0.4345 \\\hline
+acc_watch_x_freq_0.0_Hz_ws_40  &  0.4173 \\\hline
+acc_watch_y  &  0.4165 \\\hline
+acc_watch_x  &  0.3928 \\\hline
+labelEating  &  0.3504 \\\hline
+temp_pattern_labelEating  &  0.3504 \\\hline
+temp_pattern_labelEating(b)labelEating  &  0.3504 \\\hline
+mag_phone_z_max_freq  &  0.3198 \\\hline
+mag_watch_x_max_freq  &  0.2834 \\\hline
+pca_3_temp_mean_ws_120  &  0.2074 \\\hline
+mag_watch_z_max_freq  &  0.2060 \\\hline
+light_phone_lux_temp_mean_ws_120  &  0.2026 \\\hline
+pca_3  &  0.1932 \\\hline
+pca_5_temp_mean_ws_120  &  0.1871 \\\hline
+mag_phone_x  &  0.1763 \\\hline
+mag_phone_x_freq_0.0_Hz_ws_40  &  0.1721 \\\hline
+mag_phone_x_temp_mean_ws_120  &  0.1704 \\\hline
+pca_5  &  0.1628 \\\hline
+light_phone_lux  &  0.1618 \\\hline
+acc_phone_y_temp_mean_ws_120  &  0.1615 \\\hline
+acc_phone_y_freq_0.0_Hz_ws_40  &  0.1586 \\\hline
+acc_phone_y  &  0.1564 \\\hline
+mag_phone_y_max_freq  &  0.1157 \\\hline
+acc_phone_x_max_freq  &  0.0928 \\\hline
+acc_watch_z_freq_0.7_Hz_ws_40  &  0.0851 \\\hline
+mag_watch_y_freq_0.4_Hz_ws_40  &  0.0781 \\\hline
+cluster  &  0.0667 \\\hline
+acc_watch_y_freq_1.1_Hz_ws_40  &  0.0626 \\\hline
+acc_watch_z_freq_0.4_Hz_ws_40  &  0.0552 \\\hline
+mag_watch_x_temp_mean_ws_120  &  0.0537 \\\hline
+gyr_phone_y_freq_1.5_Hz_ws_40  &  0.0490 \\\hline
+mag_watch_z_freq_0.8_Hz_ws_40  &  0.0485 \\\hline
+mag_watch_x_freq_0.0_Hz_ws_40  &  0.0465 \\\hline
+gyr_phone_x_temp_mean_ws_120  &  0.0440 \\\hline
+mag_watch_x  &  0.0413 \\\hline
+acc_watch_z_freq_1.1_Hz_ws_40  &  0.0405 \\\hline
+gyr_phone_z_freq_0.7_Hz_ws_40  &  0.0382 \\\hline
+pca_7  &  0.0379 \\\hline
+pca_7_temp_mean_ws_120  &  0.0368 \\\hline
+gyr_phone_z_freq_weighted  &  0.0363 \\\hline
+mag_phone_y_freq_0.7_Hz_ws_40  &  0.0340 \\\hline
+acc_watch_z_freq_0.6_Hz_ws_40  &  0.0331 \\\hline
+press_phone_pressure_temp_mean_ws_120  &  0.0329 \\\hline
+mag_watch_y_temp_mean_ws_120  &  0.0317 \\\hline
+acc_phone_z_freq_0.4_Hz_ws_40  &  0.0317 \\\hline
+gyr_phone_x_freq_0.0_Hz_ws_40  &  0.0316 \\\hline
+mag_watch_x_freq_weighted  &  0.0296 \\\hline
+gyr_watch_x_freq_0.8_Hz_ws_40  &  0.0293 \\\hline
+acc_watch_z_freq_0.5_Hz_ws_40  &  0.0289 \\\hline
+acc_phone_x_freq_0.7_Hz_ws_40  &  0.0281 \\\hline
+mag_watch_y_freq_1.7_Hz_ws_40  &  0.0274 \\\hline
+mag_watch_y_freq_1.8_Hz_ws_40  &  0.0274 \\\hline
+mag_watch_y_freq_1.9_Hz_ws_40  &  0.0273 \\\hline
+mag_watch_y_freq_1.6_Hz_ws_40  &  0.0273 \\\hline
+mag_watch_y_freq_2.0_Hz_ws_40  &  0.0273 \\\hline
+gyr_watch_x_freq_1.1_Hz_ws_40  &  0.0268 \\\hline
+mag_watch_y_freq_1.4_Hz_ws_40  &  0.0266 \\\hline
+acc_phone_z_freq_1.5_Hz_ws_40  &  0.0264 \\\hline
+gyr_phone_y_freq_weighted  &  0.0257 \\\hline
+pca_4  &  0.0251 \\\hline
+press_phone_pressure  &  0.0240 \\\hline
+mag_phone_z_freq_0.4_Hz_ws_40  &  0.0237 \\\hline
+mag_watch_y_freq_0.5_Hz_ws_40  &  0.0236 \\\hline
+mag_watch_y_freq_1.3_Hz_ws_40  &  0.0235 \\\hline
+mag_watch_y_freq_1.2_Hz_ws_40  &  0.0220 \\\hline
+mag_watch_y_freq_0.8_Hz_ws_40  &  0.0216 \\\hline
+acc_phone_z_freq_0.7_Hz_ws_40  &  0.0216 \\\hline
+mag_phone_y_freq_0.3_Hz_ws_40  &  0.0211 \\\hline
+acc_watch_x_freq_0.8_Hz_ws_40  &  0.0207 \\\hline
+acc_watch_x_freq_0.4_Hz_ws_40  &  0.0206 \\\hline
+pca_4_temp_mean_ws_120  &  0.0204 \\\hline
+gyr_watch_x_freq_2.0_Hz_ws_40  &  0.0197 \\\hline
+mag_watch_z_freq_weighted  &  0.0193 \\\hline
+mag_phone_y_temp_std_ws_120  &  0.0190 \\\hline
+gyr_watch_x_freq_1.9_Hz_ws_40  &  0.0190 \\\hline
+acc_watch_y_freq_0.8_Hz_ws_40  &  0.0187 \\\hline
+mag_watch_y_freq_0.7_Hz_ws_40  &  0.0182 \\\hline
+acc_phone_y_freq_1.5_Hz_ws_40  &  0.0181 \\\hline
+mag_phone_y_freq_weighted  &  0.0180 \\\hline
+mag_watch_y_freq_1.5_Hz_ws_40  &  0.0174 \\\hline
+acc_watch_y_freq_1.0_Hz_ws_40  &  0.0174 \\\hline
+gyr_watch_x_freq_1.8_Hz_ws_40  &  0.0174 \\\hline
+mag_watch_y_freq_0.6_Hz_ws_40  &  0.0170 \\\hline
+mag_watch_z_freq_1.2_Hz_ws_40  &  0.0169 \\\hline
+mag_watch_y_freq_0.0_Hz_ws_40  &  0.0168 \\\hline
+gyr_watch_x_freq_1.0_Hz_ws_40  &  0.0167 \\\hline
+mag_watch_y_freq_1.0_Hz_ws_40  &  0.0166 \\\hline
+gyr_watch_z_freq_1.1_Hz_ws_40  &  0.0162 \\\hline
+gyr_phone_z_freq_0.3_Hz_ws_40  &  0.0162 \\\hline
+mag_watch_y_freq_0.9_Hz_ws_40  &  0.0155 \\\hline
+mag_phone_y_freq_1.2_Hz_ws_40  &  0.0153 \\\hline
+gyr_phone_x_freq_0.7_Hz_ws_40  &  0.0151 \\\hline
+gyr_watch_x_freq_0.9_Hz_ws_40  &  0.0150 \\\hline
+gyr_watch_z_freq_2.0_Hz_ws_40  &  0.0144 \\\hline
+gyr_watch_z_freq_1.9_Hz_ws_40  &  0.0142 \\\hline
+gyr_watch_x_freq_1.7_Hz_ws_40  &  0.0141 \\\hline
+mag_phone_y_freq_1.6_Hz_ws_40  &  0.0138 \\\hline
+mag_phone_y_freq_1.7_Hz_ws_40  &  0.0138 \\\hline
+mag_phone_y_freq_2.0_Hz_ws_40  &  0.0137 \\\hline
+mag_phone_y_freq_1.8_Hz_ws_40  &  0.0137 \\\hline
+mag_phone_y_freq_1.9_Hz_ws_40  &  0.0137 \\\hline
+gyr_watch_z_freq_1.8_Hz_ws_40  &  0.0137 \\\hline
+mag_phone_z_freq_1.4_Hz_ws_40  &  0.0136 \\\hline
+acc_watch_y_freq_0.9_Hz_ws_40  &  0.0135 \\\hline
+mag_phone_y_freq_1.3_Hz_ws_40  &  0.0131 \\\hline
+mag_phone_z_freq_2.0_Hz_ws_40  &  0.0129 \\\hline
+mag_phone_z_freq_1.9_Hz_ws_40  &  0.0128 \\\hline
+gyr_watch_z_freq_1.7_Hz_ws_40  &  0.0128 \\\hline
+mag_phone_z_freq_1.8_Hz_ws_40  &  0.0128 \\\hline
+mag_phone_z_freq_1.7_Hz_ws_40  &  0.0126 \\\hline
+mag_phone_z_freq_1.3_Hz_ws_40  &  0.0123 \\\hline
+mag_phone_z_freq_1.1_Hz_ws_40  &  0.0123 \\\hline
+mag_phone_z_freq_1.2_Hz_ws_40  &  0.0123 \\\hline
+mag_phone_z_freq_1.6_Hz_ws_40  &  0.0122 \\\hline
+mag_watch_y_freq_1.1_Hz_ws_40  &  0.0121 \\\hline
+gyr_watch_x_temp_mean_ws_120  &  0.0120 \\\hline
+gyr_watch_x_freq_1.5_Hz_ws_40  &  0.0119 \\\hline
+gyr_phone_y_freq_1.6_Hz_ws_40  &  0.0116 \\\hline
+mag_phone_z_freq_0.8_Hz_ws_40  &  0.0115 \\\hline
+gyr_watch_x_freq_0.3_Hz_ws_40  &  0.0114 \\\hline
+mag_phone_y_freq_1.4_Hz_ws_40  &  0.0114 \\\hline
+acc_phone_x_freq_0.4_Hz_ws_40  &  0.0110 \\\hline
+acc_phone_z_freq_weighted  &  0.0110 \\\hline
+acc_phone_z_freq_0.6_Hz_ws_40  &  0.0109 \\\hline
+acc_watch_y_freq_0.3_Hz_ws_40  &  0.0109 \\\hline
+gyr_phone_z_freq_0.6_Hz_ws_40  &  0.0109 \\\hline
+gyr_phone_x_freq_0.2_Hz_ws_40  &  0.0106 \\\hline
+gyr_phone_x_freq_1.2_Hz_ws_40  &  0.0104 \\\hline
+gyr_watch_z_freq_1.6_Hz_ws_40  &  0.0103 \\\hline
+gyr_phone_x_freq_2.0_Hz_ws_40  &  0.0103 \\\hline
+gyr_phone_z_freq_0.4_Hz_ws_40  &  0.0103 \\\hline
+gyr_phone_x_freq_1.9_Hz_ws_40  &  0.0101 \\\hline
+acc_phone_y_freq_0.8_Hz_ws_40  &  0.0098 \\\hline
+mag_watch_x_freq_0.3_Hz_ws_40  &  0.0098 \\\hline
+mag_watch_z_freq_1.3_Hz_ws_40  &  0.0097 \\\hline
+gyr_phone_x_freq_1.8_Hz_ws_40  &  0.0096 \\\hline
+acc_watch_x_freq_0.9_Hz_ws_40  &  0.0096 \\\hline
+mag_phone_y_freq_0.6_Hz_ws_40  &  0.0093 \\\hline
+mag_watch_z_freq_0.9_Hz_ws_40  &  0.0093 \\\hline
+gyr_phone_x_max_freq  &  0.0092 \\\hline
+gyr_watch_z_freq_0.1_Hz_ws_40  &  0.0092 \\\hline
+mag_phone_z_freq_0.5_Hz_ws_40  &  0.0092 \\\hline
+gyr_phone_z_freq_1.2_Hz_ws_40  &  0.0091 \\\hline
+gyr_phone_y_freq_1.7_Hz_ws_40  &  0.0091 \\\hline
+gyr_watch_x_freq_1.4_Hz_ws_40  &  0.0091 \\\hline
+gyr_watch_y_freq_0.8_Hz_ws_40  &  0.0089 \\\hline
+gyr_phone_x_freq_0.6_Hz_ws_40  &  0.0087 \\\hline
+gyr_phone_x_freq_1.7_Hz_ws_40  &  0.0087 \\\hline
+gyr_phone_y_freq_1.2_Hz_ws_40  &  0.0087 \\\hline
+mag_phone_y_freq_0.2_Hz_ws_40  &  0.0084 \\\hline
+mag_watch_z_freq_1.4_Hz_ws_40  &  0.0083 \\\hline
+gyr_phone_z_freq_0.5_Hz_ws_40  &  0.0083 \\\hline
+acc_phone_y_freq_0.4_Hz_ws_40  &  0.0082 \\\hline
+gyr_phone_z_freq_0.1_Hz_ws_40  &  0.0081 \\\hline
+gyr_phone_y_freq_1.8_Hz_ws_40  &  0.0080 \\\hline
+gyr_watch_z_freq_0.3_Hz_ws_40  &  0.0077 \\\hline
+gyr_watch_z_freq_0.8_Hz_ws_40  &  0.0076 \\\hline
+acc_watch_x_freq_1.2_Hz_ws_40  &  0.0075 \\\hline
+gyr_phone_y_freq_1.9_Hz_ws_40  &  0.0074 \\\hline
+mag_watch_y  &  0.0074 \\\hline
+gyr_phone_x_freq_1.4_Hz_ws_40  &  0.0074 \\\hline
+acc_watch_x_freq_1.7_Hz_ws_40  &  0.0074 \\\hline
+gyr_watch_x_freq_0.0_Hz_ws_40  &  0.0074 \\\hline
+acc_watch_x_freq_1.8_Hz_ws_40  &  0.0073 \\\hline
+acc_phone_z_freq_0.5_Hz_ws_40  &  0.0073 \\\hline
+acc_watch_x_freq_1.9_Hz_ws_40  &  0.0072 \\\hline
+gyr_phone_y_freq_2.0_Hz_ws_40  &  0.0072 \\\hline
+acc_watch_x_freq_2.0_Hz_ws_40  &  0.0072 \\\hline
+gyr_phone_x_freq_0.5_Hz_ws_40  &  0.0070 \\\hline
+gyr_phone_x_freq_1.3_Hz_ws_40  &  0.0070 \\\hline
+acc_watch_x_freq_1.1_Hz_ws_40  &  0.0067 \\\hline
+acc_watch_y_freq_1.4_Hz_ws_40  &  0.0067 \\\hline
+acc_phone_x_freq_0.6_Hz_ws_40  &  0.0066 \\\hline
+acc_watch_x_freq_1.6_Hz_ws_40  &  0.0065 \\\hline
+acc_watch_y_freq_2.0_Hz_ws_40  &  0.0065 \\\hline
+gyr_watch_x_freq_0.1_Hz_ws_40  &  0.0065 \\\hline
+gyr_phone_x_freq_1.6_Hz_ws_40  &  0.0064 \\\hline
+acc_phone_x_freq_0.5_Hz_ws_40  &  0.0064 \\\hline
+gyr_watch_y  &  0.0064 \\\hline
+acc_watch_x_freq_1.3_Hz_ws_40  &  0.0063 \\\hline
+gyr_watch_x_freq_1.6_Hz_ws_40  &  0.0062 \\\hline
+mag_phone_z_freq_0.9_Hz_ws_40  &  0.0061 \\\hline
+acc_watch_y_freq_1.9_Hz_ws_40  &  0.0061 \\\hline
+gyr_phone_x_freq_0.3_Hz_ws_40  &  0.0058 \\\hline
+acc_phone_z_freq_0.1_Hz_ws_40  &  0.0058 \\\hline
+mag_phone_z_freq_1.0_Hz_ws_40  &  0.0058 \\\hline
+acc_phone_y_freq_1.1_Hz_ws_40  &  0.0058 \\\hline
+acc_watch_y_freq_0.1_Hz_ws_40  &  0.0057 \\\hline
+gyr_phone_z_freq_2.0_Hz_ws_40  &  0.0057 \\\hline
+gyr_phone_z_freq_1.9_Hz_ws_40  &  0.0056 \\\hline
+mag_phone_x_freq_0.3_Hz_ws_40  &  0.0056 \\\hline
+gyr_phone_z_freq_1.8_Hz_ws_40  &  0.0055 \\\hline
+gyr_phone_z_freq_1.6_Hz_ws_40  &  0.0055 \\\hline
+gyr_watch_y_freq_1.5_Hz_ws_40  &  0.0055 \\\hline
+acc_watch_x_freq_1.0_Hz_ws_40  &  0.0055 \\\hline
+gyr_phone_z_freq_1.7_Hz_ws_40  &  0.0054 \\\hline
+mag_phone_z_freq_0.6_Hz_ws_40  &  0.0054 \\\hline
+gyr_phone_x_freq_0.1_Hz_ws_40  &  0.0054 \\\hline
+gyr_watch_x_freq_0.2_Hz_ws_40  &  0.0053 \\\hline
+gyr_watch_x  &  0.0052 \\\hline
+mag_phone_z_freq_1.5_Hz_ws_40  &  0.0051 \\\hline
+acc_watch_y_freq_1.8_Hz_ws_40  &  0.0051 \\\hline
+acc_watch_x_freq_0.5_Hz_ws_40  &  0.0050 \\\hline
+mag_watch_z_freq_1.6_Hz_ws_40  &  0.0049 \\\hline
+gyr_watch_z_freq_1.4_Hz_ws_40  &  0.0047 \\\hline
+mag_phone_y_freq_1.5_Hz_ws_40  &  0.0045 \\\hline
+mag_watch_z_freq_1.7_Hz_ws_40  &  0.0044 \\\hline
+gyr_phone_z_freq_1.3_Hz_ws_40  &  0.0043 \\\hline
+acc_watch_y_freq_0.2_Hz_ws_40  &  0.0040 \\\hline
+mag_phone_z_freq_weighted  &  0.0039 \\\hline
+mag_watch_z_freq_1.8_Hz_ws_40  &  0.0038 \\\hline
+gyr_phone_y_freq_0.2_Hz_ws_40  &  0.0037 \\\hline
+gyr_watch_z_freq_0.2_Hz_ws_40  &  0.0037 \\\hline
+gyr_watch_z_freq_0.9_Hz_ws_40  &  0.0037 \\\hline
+mag_watch_z_freq_1.9_Hz_ws_40  &  0.0035 \\\hline
+gyr_phone_z_freq_0.2_Hz_ws_40  &  0.0034 \\\hline
+mag_watch_z_freq_2.0_Hz_ws_40  &  0.0033 \\\hline
+mag_watch_x_freq_0.2_Hz_ws_40  &  0.0033 \\\hline
+acc_watch_y_freq_1.7_Hz_ws_40  &  0.0031 \\\hline
+gyr_phone_z_freq_1.4_Hz_ws_40  &  0.0031 \\\hline
+gyr_watch_z_freq_1.3_Hz_ws_40  &  0.0030 \\\hline
+mag_watch_z_freq_1.0_Hz_ws_40  &  0.0029 \\\hline
+mag_watch_z_freq_0.3_Hz_ws_40  &  0.0028 \\\hline
+gyr_phone_y_freq_0.7_Hz_ws_40  &  0.0028 \\\hline
+acc_phone_x_freq_1.1_Hz_ws_40  &  0.0027 \\\hline
+gyr_phone_y_freq_1.4_Hz_ws_40  &  0.0027 \\\hline
+mag_watch_z_freq_1.5_Hz_ws_40  &  0.0026 \\\hline
+acc_watch_x_freq_1.4_Hz_ws_40  &  0.0026 \\\hline
+mag_watch_y_freq_weighted  &  0.0025 \\\hline
+gyr_phone_y_freq_0.8_Hz_ws_40  &  0.0024 \\\hline
+gyr_watch_y_freq_0.9_Hz_ws_40  &  0.0024 \\\hline
+gyr_phone_y_freq_0.3_Hz_ws_40  &  0.0024 \\\hline
+gyr_watch_z_freq_1.0_Hz_ws_40  &  0.0024 \\\hline
+gyr_watch_x_freq_1.3_Hz_ws_40  &  0.0023 \\\hline
+acc_watch_y_freq_1.3_Hz_ws_40  &  0.0022 \\\hline
+mag_phone_z_freq_0.7_Hz_ws_40  &  0.0021 \\\hline
+acc_watch_z_freq_1.4_Hz_ws_40  &  0.0020 \\\hline
+mag_phone_y_freq_0.1_Hz_ws_40  &  0.0020 \\\hline
+gyr_watch_z_freq_0.5_Hz_ws_40  &  0.0019 \\\hline
+gyr_watch_y_freq_1.6_Hz_ws_40  &  0.0019 \\\hline
+gyr_watch_y_freq_0.3_Hz_ws_40  &  0.0018 \\\hline
+gyr_watch_z_freq_1.2_Hz_ws_40  &  0.0015 \\\hline
+acc_phone_y_freq_0.9_Hz_ws_40  &  0.0014 \\\hline
+acc_phone_x_freq_weighted  &  0.0013 \\\hline
+acc_phone_z_freq_1.6_Hz_ws_40  &  0.0009 \\\hline
+gyr_phone_y_freq_0.1_Hz_ws_40  &  0.0009 \\\hline
+acc_watch_x_freq_0.1_Hz_ws_40  &  0.0009 \\\hline
+gyr_watch_z_freq_0.6_Hz_ws_40  &  0.0007 \\\hline
+mag_watch_z_freq_0.1_Hz_ws_40  &  0.0006 \\\hline
+mag_watch_x_freq_1.2_Hz_ws_40  &  0.0005 \\\hline
+gyr_watch_y_freq_1.7_Hz_ws_40  &  0.0005 \\\hline
+acc_watch_z_freq_1.0_Hz_ws_40  &  0.0001 \\\hline
+mag_watch_x_freq_0.8_Hz_ws_40  &  0.0001 \\\hline
+gyr_watch_y_freq_1.2_Hz_ws_40  &  0.0000 \\\hline
+gyr_phone_y_freq_1.3_Hz_ws_40  &  -0.0000 \\\hline
+gyr_watch_y_freq_1.3_Hz_ws_40  &  -0.0000 \\\hline
+gyr_watch_y_freq_0.2_Hz_ws_40  &  -0.0002 \\\hline
+gyr_watch_y_freq_1.8_Hz_ws_40  &  -0.0003 \\\hline
+acc_phone_z_freq_1.7_Hz_ws_40  &  -0.0006 \\\hline
+mag_watch_x_freq_0.1_Hz_ws_40  &  -0.0006 \\\hline
+gyr_phone_x_freq_0.9_Hz_ws_40  &  -0.0006 \\\hline
+gyr_watch_y_freq_1.9_Hz_ws_40  &  -0.0007 \\\hline
+acc_watch_z_freq_2.0_Hz_ws_40  &  -0.0009 \\\hline
+gyr_watch_y_freq_2.0_Hz_ws_40  &  -0.0009 \\\hline
+gyr_phone_y_freq_1.0_Hz_ws_40  &  -0.0010 \\\hline
+mag_watch_z_freq_0.2_Hz_ws_40  &  -0.0010 \\\hline
+mag_phone_y_freq_0.5_Hz_ws_40  &  -0.0011 \\\hline
+acc_phone_z_freq_1.8_Hz_ws_40  &  -0.0011 \\\hline
+acc_watch_z_freq_1.9_Hz_ws_40  &  -0.0013 \\\hline
+gyr_phone_x_freq_1.0_Hz_ws_40  &  -0.0013 \\\hline
+mag_watch_x_freq_1.4_Hz_ws_40  &  -0.0013 \\\hline
+gyr_watch_y_freq_0.1_Hz_ws_40  &  -0.0014 \\\hline
+mag_phone_x_freq_0.1_Hz_ws_40  &  -0.0014 \\\hline
+acc_phone_z_freq_1.9_Hz_ws_40  &  -0.0014 \\\hline
+mag_phone_z_freq_0.2_Hz_ws_40  &  -0.0014 \\\hline
+acc_watch_z_freq_0.1_Hz_ws_40  &  -0.0015 \\\hline
+acc_phone_z_freq_2.0_Hz_ws_40  &  -0.0015 \\\hline
+acc_watch_y_freq_1.6_Hz_ws_40  &  -0.0015 \\\hline
+acc_phone_y_freq_0.5_Hz_ws_40  &  -0.0016 \\\hline
+gyr_phone_y_freq_0.9_Hz_ws_40  &  -0.0016 \\\hline
+mag_watch_y_freq_0.1_Hz_ws_40  &  -0.0017 \\\hline
+gyr_watch_y_freq_0.7_Hz_ws_40  &  -0.0017 \\\hline
+gyr_phone_z_freq_0.9_Hz_ws_40  &  -0.0017 \\\hline
+acc_watch_x_freq_0.6_Hz_ws_40  &  -0.0017 \\\hline
+acc_watch_z_freq_1.3_Hz_ws_40  &  -0.0018 \\\hline
+acc_phone_z_freq_1.3_Hz_ws_40  &  -0.0018 \\\hline
+mag_phone_z_freq_0.3_Hz_ws_40  &  -0.0020 \\\hline
+acc_phone_y_freq_1.0_Hz_ws_40  &  -0.0020 \\\hline
+mag_phone_x_freq_0.2_Hz_ws_40  &  -0.0021 \\\hline
+acc_watch_z_freq_1.8_Hz_ws_40  &  -0.0022 \\\hline
+gyr_phone_x  &  -0.0022 \\\hline
+acc_phone_z_freq_1.0_Hz_ws_40  &  -0.0022 \\\hline
+gyr_watch_y_freq_1.0_Hz_ws_40  &  -0.0022 \\\hline
+gyr_watch_x_freq_1.2_Hz_ws_40  &  -0.0023 \\\hline
+gyr_phone_y_freq_0.6_Hz_ws_40  &  -0.0024 \\\hline
+acc_phone_x_freq_0.2_Hz_ws_40  &  -0.0024 \\\hline
+acc_phone_z_freq_0.2_Hz_ws_40  &  -0.0026 \\\hline
+acc_phone_y_freq_0.1_Hz_ws_40  &  -0.0027 \\\hline
+acc_phone_x_freq_0.1_Hz_ws_40  &  -0.0027 \\\hline
+acc_phone_y_freq_weighted  &  -0.0028 \\\hline
+gyr_phone_z_freq_1.0_Hz_ws_40  &  -0.0028 \\\hline
+acc_watch_z_freq_0.2_Hz_ws_40  &  -0.0028 \\\hline
+mag_watch_x_freq_0.9_Hz_ws_40  &  -0.0029 \\\hline
+acc_phone_y_freq_1.2_Hz_ws_40  &  -0.0031 \\\hline
+mag_watch_x_freq_1.5_Hz_ws_40  &  -0.0031 \\\hline
+mag_watch_x_freq_1.3_Hz_ws_40  &  -0.0032 \\\hline
+acc_phone_z_freq_0.9_Hz_ws_40  &  -0.0033 \\\hline
+mag_watch_x_freq_1.0_Hz_ws_40  &  -0.0037 \\\hline
+acc_phone_x_freq_1.0_Hz_ws_40  &  -0.0037 \\\hline
+gyr_phone_y_freq_0.5_Hz_ws_40  &  -0.0039 \\\hline
+acc_watch_y_freq_0.6_Hz_ws_40  &  -0.0040 \\\hline
+acc_watch_z_freq_1.7_Hz_ws_40  &  -0.0040 \\\hline
+gyr_phone_y  &  -0.0043 \\\hline
+mag_phone_y_freq_1.0_Hz_ws_40  &  -0.0044 \\\hline
+mag_phone_z_freq_0.1_Hz_ws_40  &  -0.0046 \\\hline
+gyr_watch_y_freq_1.4_Hz_ws_40  &  -0.0047 \\\hline
+acc_watch_x_freq_0.2_Hz_ws_40  &  -0.0048 \\\hline
+acc_watch_y_freq_0.5_Hz_ws_40  &  -0.0048 \\\hline
+gyr_watch_y_freq_0.5_Hz_ws_40  &  -0.0048 \\\hline
+acc_phone_y_freq_0.2_Hz_ws_40  &  -0.0049 \\\hline
+gyr_watch_y_freq_0.6_Hz_ws_40  &  -0.0050 \\\hline
+mag_watch_x_freq_1.7_Hz_ws_40  &  -0.0051 \\\hline
+acc_phone_z_freq_1.2_Hz_ws_40  &  -0.0051 \\\hline
+mag_watch_x_freq_1.8_Hz_ws_40  &  -0.0051 \\\hline
+acc_phone_y_freq_1.3_Hz_ws_40  &  -0.0051 \\\hline
+mag_watch_x_freq_1.9_Hz_ws_40  &  -0.0051 \\\hline
+mag_watch_x_freq_2.0_Hz_ws_40  &  -0.0051 \\\hline
+mag_watch_x_freq_1.6_Hz_ws_40  &  -0.0051 \\\hline
+gyr_watch_z_freq_0.7_Hz_ws_40  &  -0.0052 \\\hline
+mag_watch_y_freq_0.2_Hz_ws_40  &  -0.0053 \\\hline
+acc_phone_y_freq_1.4_Hz_ws_40  &  -0.0053 \\\hline
+acc_watch_x_freq_1.5_Hz_ws_40  &  -0.0054 \\\hline
+gyr_phone_x_freq_0.4_Hz_ws_40  &  -0.0055 \\\hline
+acc_phone_x_freq_1.4_Hz_ws_40  &  -0.0057 \\\hline
+acc_watch_y_freq_1.2_Hz_ws_40  &  -0.0061 \\\hline
+gyr_watch_x_freq_0.5_Hz_ws_40  &  -0.0061 \\\hline
+mag_phone_y_freq_0.9_Hz_ws_40  &  -0.0062 \\\hline
+mag_phone_x_freq_1.1_Hz_ws_40  &  -0.0065 \\\hline
+acc_phone_z_freq_1.4_Hz_ws_40  &  -0.0065 \\\hline
+gyr_watch_x_freq_0.6_Hz_ws_40  &  -0.0066 \\\hline
+acc_phone_x_freq_1.3_Hz_ws_40  &  -0.0066 \\\hline
+gyr_watch_z_max_freq  &  -0.0070 \\\hline
+acc_phone_y_freq_1.6_Hz_ws_40  &  -0.0071 \\\hline
+gyr_phone_x_freq_0.8_Hz_ws_40  &  -0.0071 \\\hline
+acc_phone_z_freq_0.3_Hz_ws_40  &  -0.0079 \\\hline
+acc_phone_y_freq_1.7_Hz_ws_40  &  -0.0080 \\\hline
+gyr_watch_z_freq_1.5_Hz_ws_40  &  -0.0081 \\\hline
+acc_phone_y_freq_0.6_Hz_ws_40  &  -0.0082 \\\hline
+acc_watch_z_freq_1.6_Hz_ws_40  &  -0.0083 \\\hline
+acc_phone_z_freq_1.1_Hz_ws_40  &  -0.0085 \\\hline
+acc_phone_y_freq_1.8_Hz_ws_40  &  -0.0085 \\\hline
+gyr_watch_y_freq_1.1_Hz_ws_40  &  -0.0086 \\\hline
+mag_watch_x_freq_0.6_Hz_ws_40  &  -0.0087 \\\hline
+acc_phone_y_freq_1.9_Hz_ws_40  &  -0.0088 \\\hline
+acc_watch_x_freq_0.3_Hz_ws_40  &  -0.0088 \\\hline
+acc_phone_y_freq_2.0_Hz_ws_40  &  -0.0089 \\\hline
+acc_watch_z_freq_0.9_Hz_ws_40  &  -0.0097 \\\hline
+acc_watch_z_freq_1.2_Hz_ws_40  &  -0.0100 \\\hline
+acc_watch_y_freq_weighted  &  -0.0101 \\\hline
+acc_phone_x_freq_0.9_Hz_ws_40  &  -0.0103 \\\hline
+mag_phone_x_freq_0.9_Hz_ws_40  &  -0.0108 \\\hline
+gyr_watch_y_freq_0.4_Hz_ws_40  &  -0.0108 \\\hline
+mag_watch_x_freq_0.5_Hz_ws_40  &  -0.0109 \\\hline
+acc_phone_x_freq_0.3_Hz_ws_40  &  -0.0111 \\\hline
+acc_phone_z_freq_0.8_Hz_ws_40  &  -0.0119 \\\hline
+mag_phone_x_freq_weighted  &  -0.0128 \\\hline
+mag_watch_x_freq_1.1_Hz_ws_40  &  -0.0135 \\\hline
+gyr_phone_z_freq_0.8_Hz_ws_40  &  -0.0138 \\\hline
+acc_phone_x_freq_1.2_Hz_ws_40  &  -0.0141 \\\hline
+acc_watch_z_freq_0.3_Hz_ws_40  &  -0.0143 \\\hline
+mag_watch_z_freq_0.5_Hz_ws_40  &  -0.0144 \\\hline
+mag_phone_x_freq_0.7_Hz_ws_40  &  -0.0145 \\\hline
+gyr_phone_z  &  -0.0161 \\\hline
+gyr_phone_y_freq_0.4_Hz_ws_40  &  -0.0162 \\\hline
+mag_phone_x_freq_1.0_Hz_ws_40  &  -0.0166 \\\hline
+acc_watch_y_freq_1.5_Hz_ws_40  &  -0.0167 \\\hline
+mag_watch_z_freq_0.4_Hz_ws_40  &  -0.0174 \\\hline
+gyr_phone_x_freq_1.1_Hz_ws_40  &  -0.0174 \\\hline
+acc_watch_x_freq_weighted  &  -0.0181 \\\hline
+mag_phone_y_freq_0.4_Hz_ws_40  &  -0.0181 \\\hline
+mag_watch_y_freq_0.3_Hz_ws_40  &  -0.0184 \\\hline
+acc_phone_y_freq_0.3_Hz_ws_40  &  -0.0186 \\\hline
+gyr_watch_z_freq_0.4_Hz_ws_40  &  -0.0186 \\\hline
+gyr_watch_z  &  -0.0188 \\\hline
+gyr_phone_z_freq_1.5_Hz_ws_40  &  -0.0189 \\\hline
+acc_watch_x_freq_0.7_Hz_ws_40  &  -0.0190 \\\hline
+mag_watch_x_freq_0.7_Hz_ws_40  &  -0.0190 \\\hline
+gyr_phone_x_freq_1.5_Hz_ws_40  &  -0.0194 \\\hline
+acc_phone_x_freq_2.0_Hz_ws_40  &  -0.0197 \\\hline
+acc_phone_x_freq_1.9_Hz_ws_40  &  -0.0199 \\\hline
+mag_phone_x_freq_0.6_Hz_ws_40  &  -0.0200 \\\hline
+acc_phone_x_freq_1.8_Hz_ws_40  &  -0.0203 \\\hline
+acc_phone_x_freq_0.8_Hz_ws_40  &  -0.0203 \\\hline
+mag_phone_x_freq_0.8_Hz_ws_40  &  -0.0205 \\\hline
+acc_phone_x_freq_1.7_Hz_ws_40  &  -0.0210 \\\hline
+acc_watch_y_freq_0.7_Hz_ws_40  &  -0.0211 \\\hline
+gyr_phone_y_freq_0.0_Hz_ws_40  &  -0.0214 \\\hline
+gyr_phone_y_freq_1.1_Hz_ws_40  &  -0.0216 \\\hline
+mag_phone_y_freq_0.8_Hz_ws_40  &  -0.0222 \\\hline
+acc_watch_z_freq_weighted  &  -0.0223 \\\hline
+mag_phone_x_freq_0.5_Hz_ws_40  &  -0.0224 \\\hline
+mag_watch_z_freq_0.6_Hz_ws_40  &  -0.0225 \\\hline
+acc_phone_x_freq_1.6_Hz_ws_40  &  -0.0226 \\\hline
+mag_watch_y_max_freq  &  -0.0229 \\\hline
+gyr_watch_x_freq_0.7_Hz_ws_40  &  -0.0232 \\\hline
+mag_phone_x_freq_1.3_Hz_ws_40  &  -0.0261 \\\hline
+acc_phone_y_freq_0.7_Hz_ws_40  &  -0.0267 \\\hline
+gyr_phone_z_freq_1.1_Hz_ws_40  &  -0.0267 \\\hline
+gyr_watch_y_freq_weighted  &  -0.0270 \\\hline
+gyr_watch_z_freq_weighted  &  -0.0270 \\\hline
+mag_phone_x_freq_1.2_Hz_ws_40  &  -0.0272 \\\hline
+mag_phone_x_freq_1.4_Hz_ws_40  &  -0.0274 \\\hline
+gyr_watch_y_freq_0.0_Hz_ws_40  &  -0.0297 \\\hline
+mag_phone_x_freq_2.0_Hz_ws_40  &  -0.0319 \\\hline
+mag_phone_x_freq_1.9_Hz_ws_40  &  -0.0320 \\\hline
+mag_phone_x_freq_1.8_Hz_ws_40  &  -0.0322 \\\hline
+mag_phone_x_freq_1.7_Hz_ws_40  &  -0.0326 \\\hline
+mag_phone_x_freq_1.6_Hz_ws_40  &  -0.0336 \\\hline
+gyr_watch_x_freq_0.4_Hz_ws_40  &  -0.0341 \\\hline
+mag_watch_z_freq_1.1_Hz_ws_40  &  -0.0344 \\\hline
+acc_watch_y_freq_0.4_Hz_ws_40  &  -0.0354 \\\hline
+mag_watch_x_freq_0.4_Hz_ws_40  &  -0.0356 \\\hline
+mag_phone_x_freq_0.4_Hz_ws_40  &  -0.0391 \\\hline
+mag_phone_y_freq_1.1_Hz_ws_40  &  -0.0429 \\\hline
+acc_phone_x_freq_1.5_Hz_ws_40  &  -0.0445 \\\hline
+gyr_phone_y_temp_mean_ws_120  &  -0.0478 \\\hline
+gyr_watch_x_freq_weighted  &  -0.0483 \\\hline
+mag_watch_y_pse  &  -0.0501 \\\hline
+acc_watch_x_pse  &  -0.0558 \\\hline
+gyr_watch_y_temp_mean_ws_120  &  -0.0580 \\\hline
+acc_watch_z_freq_0.8_Hz_ws_40  &  -0.0585 \\\hline
+mag_watch_z_freq_0.7_Hz_ws_40  &  -0.0597 \\\hline
+gyr_phone_x_freq_weighted  &  -0.0630 \\\hline
+mag_phone_x_freq_1.5_Hz_ws_40  &  -0.0643 \\\hline
+mag_phone_z_pse  &  -0.0675 \\\hline
+mag_watch_x_pse  &  -0.0689 \\\hline
+acc_watch_z_freq_1.5_Hz_ws_40  &  -0.0717 \\\hline
+mag_phone_x_max_freq  &  -0.0723 \\\hline
+gyr_watch_z_freq_0.0_Hz_ws_40  &  -0.0749 \\\hline
+light_phone_lux_temp_std_ws_120  &  -0.0789 \\\hline
+acc_watch_z_max_freq  &  -0.0799 \\\hline
+mag_phone_z_temp_std_ws_120  &  -0.0803 \\\hline
+mag_phone_x_temp_std_ws_120  &  -0.0911 \\\hline
+mag_phone_x_pse  &  -0.0914 \\\hline
+gyr_watch_z_temp_mean_ws_120  &  -0.1064 \\\hline
+acc_phone_y_pse  &  -0.1131 \\\hline
+labelStanding  &  -0.1142 \\\hline
+temp_pattern_labelStanding  &  -0.1142 \\\hline
+temp_pattern_labelStanding(b)labelStanding  &  -0.1142 \\\hline
+pca_7_temp_std_ws_120  &  -0.1163 \\\hline
+acc_watch_y_pse  &  -0.1165 \\\hline
+gyr_phone_z_freq_0.0_Hz_ws_40  &  -0.1213 \\\hline
+acc_phone_x_temp_std_ws_120  &  -0.1272 \\\hline
+labelWashingHands  &  -0.1310 \\\hline
+mag_phone_y_pse  &  -0.1311 \\\hline
+acc_watch_z_pse  &  -0.1312 \\\hline
+acc_phone_z_pse  &  -0.1336 \\\hline
+temp_pattern_labelWalking(b)labelStanding  &  -0.1390 \\\hline
+gyr_phone_x_pse  &  -0.1414 \\\hline
+gyr_phone_y_max_freq  &  -0.1513 \\\hline
+gyr_phone_y_temp_std_ws_120  &  -0.1613 \\\hline
+pca_2_temp_std_ws_120  &  -0.1644 \\\hline
+acc_phone_y_temp_std_ws_120  &  -0.1660 \\\hline
+pca_4_temp_std_ws_120  &  -0.1738 \\\hline
+acc_watch_z  &  -0.1759 \\\hline
+acc_watch_x_temp_std_ws_120  &  -0.1835 \\\hline
+gyr_phone_z_temp_mean_ws_120  &  -0.1842 \\\hline
+temp_pattern_labelDriving  &  -0.1866 \\\hline
+temp_pattern_labelDriving(b)labelDriving  &  -0.1866 \\\hline
+labelDriving  &  -0.1866 \\\hline
+acc_phone_x_pse  &  -0.1869 \\\hline
+acc_phone_x  &  -0.1918 \\\hline
+pca_3_temp_std_ws_120  &  -0.1943 \\\hline
+gyr_phone_z_max_freq  &  -0.1973 \\\hline
+temp_pattern_labelWalking(b)labelDriving  &  -0.1993 \\\hline
+acc_phone_x_freq_0.0_Hz_ws_40  &  -0.2048 \\\hline
+acc_phone_z_temp_std_ws_120  &  -0.2059 \\\hline
+acc_watch_z_freq_0.0_Hz_ws_40  &  -0.2071 \\\hline
+acc_phone_x_temp_mean_ws_120  &  -0.2166 \\\hline
+labelWalking  &  -0.2178 \\\hline
+temp_pattern_labelWalking(b)labelWalking  &  -0.2178 \\\hline
+temp_pattern_labelWalking  &  -0.2178 \\\hline
+acc_watch_y_temp_std_ws_120  &  -0.2194 \\\hline
+gyr_watch_x_temp_std_ws_120  &  -0.2253 \\\hline
+gyr_phone_z_temp_std_ws_120  &  -0.2256 \\\hline
+acc_watch_z_temp_mean_ws_120  &  -0.2287 \\\hline
+acc_watch_x_max_freq  &  -0.2358 \\\hline
+gyr_phone_x_temp_std_ws_120  &  -0.2361 \\\hline
+pca_1_temp_std_ws_120  &  -0.2407 \\\hline
+pca_6_temp_std_ws_120  &  -0.2467 \\\hline
+gyr_phone_z_pse  &  -0.2492 \\\hline
+acc_watch_z_temp_std_ws_120  &  -0.2497 \\\hline
+acc_phone_y_max_freq  &  -0.2535 \\\hline
+mag_watch_z_pse  &  -0.2570 \\\hline
+temp_pattern_labelStanding(b)labelWalking  &  -0.2572 \\\hline
+gyr_watch_y_temp_std_ws_120  &  -0.2617 \\\hline
+gyr_watch_z_temp_std_ws_120  &  -0.2627 \\\hline
+gyr_watch_y_max_freq  &  -0.2838 \\\hline
+pca_5_temp_std_ws_120  &  -0.2858 \\\hline
+gyr_phone_y_pse  &  -0.2872 \\\hline
+labelSitting  &  -0.2910 \\\hline
+temp_pattern_labelSitting  &  -0.2910 \\\hline
+temp_pattern_labelSitting(b)labelSitting  &  -0.2910 \\\hline
+pca_6  &  -0.2967 \\\hline
+press_phone_pressure_temp_std_ws_120  &  -0.2987 \\\hline
+acc_phone_z_max_freq  &  -0.3061 \\\hline
+gyr_watch_x_max_freq  &  -0.3181 \\\hline
+mag_phone_z  &  -0.3371 \\\hline
+mag_watch_z  &  -0.3382 \\\hline
+mag_phone_z_freq_0.0_Hz_ws_40  &  -0.3456 \\\hline
+mag_watch_y_temp_std_ws_120  &  -0.3460 \\\hline
+mag_watch_z_temp_std_ws_120  &  -0.3540 \\\hline
+mag_phone_y  &  -0.3607 \\\hline
+mag_phone_y_freq_0.0_Hz_ws_40  &  -0.3608 \\\hline
+mag_phone_y_temp_mean_ws_120  &  -0.3658 \\\hline
+mag_phone_z_temp_mean_ws_120  &  -0.3668 \\\hline
+pca_6_temp_mean_ws_120  &  -0.3677 \\\hline
+mag_watch_z_freq_0.0_Hz_ws_40  &  -0.3805 \\\hline
+acc_watch_y_max_freq  &  -0.3810 \\\hline
+mag_watch_x_temp_std_ws_120  &  -0.3895 \\\hline
+mag_watch_z_temp_mean_ws_120  &  -0.4041 \\\hline
+gyr_watch_z_pse  &  -0.4711 \\\hline
+gyr_watch_y_pse  &  -0.5368 \\\hline
+gyr_watch_x_pse  &  -0.6419 \\\hline
+initial set  &  741.3321 \emph{( 1021.5089 )}  &  1610.2206 \emph{( 1438.1270 )}  &  609.7627 \emph{( 875.1161 )}  &  1503.9754 \emph{( 1332.0060 )}  &  722.1169 \emph{( 968.4416 )}  &  1407.2647 \emph{( 1275.4944 )}  &  186.8180 \emph{( 574.0642 )}  &  2309.7131 \emph{( 2027.8795 )}  &  542.8410 \emph{( 855.8231 )}  &  1496.7428 \emph{( 1268.3531 )} \\\hline
+here?
+Chapter 3  &  733.2215 \emph{( 1090.2120 )}  &  1637.9955 \emph{( 1547.0317 )}  &  474.7349 \emph{( 804.0691 )}  &  1751.5257 \emph{( 1501.3828 )}  &  947.2107 \emph{( 1404.6748 )}  &  2205.2053 \emph{( 2316.1509 )}  &  186.8158 \emph{( 574.0649 )}  &  2309.7131 \emph{( 2027.8795 )}  &  537.2469 \emph{( 850.7777 )}  &  1501.3605 \emph{( 1282.1859 )} \\\hline
+here?
+Chapter 4  &  493.3083 \emph{( 800.2145 )}  &  1881.7931 \emph{( 2074.8452 )}  &  6.9148 \emph{( 19.6784 )}  &  1446.8555 \emph{( 1296.6073 )}  &  717.3077 \emph{( 1252.6406 )}  &  2215.9327 \emph{( 4024.0606 )}  &  134.1890 \emph{( 473.5845 )}  &  2259.0333 \emph{( 1848.2105 )}  &  368.1808 \emph{( 643.8028 )}  &  1316.9553 \emph{( 826.7742 )} \\\hline
+here?
+Chapter 5  &  529.0692 \emph{( 828.7011 )}  &  1894.8093 \emph{( 2148.1751 )}  &  16.7199 \emph{( 44.1634 )}  &  1291.7499 \emph{( 1216.1034 )}  &  1191.2693 \emph{( 1947.2006 )}  &  2444.1590 \emph{( 4225.0809 )}  &  134.1890 \emph{( 473.5845 )}  &  2259.0333 \emph{( 1848.2105 )}  &  368.1808 \emph{( 643.8028 )}  &  1316.9553 \emph{( 826.7742 )} \\\hline
+here?
+Selected features  &  794.2622 \emph{( 1396.0068 )}  &  2925.4213 \emph{( 2985.3761 )}  &  564.8274 \emph{( 1036.2402 )}  &  2527.5702 \emph{( 2527.2989 )}  &  831.8999 \emph{( 1981.4916 )}  &  2665.1128 \emph{( 3046.0434 )}  &  286.0519 \emph{( 719.8518 )}  &  2571.1305 \emph{( 2895.9935 )}  &  538.6308 \emph{( 1039.8146 )}  &  2739.9881 \emph{( 2878.4239 )} \\\hline
+here?
+Segmentation fault?
+[[(741.33208130810385, 1021.5089326379824, 1610.220624479103, 1438.1270064800178), (609.7626789195549, 875.11608188661307, 1503.9754468468884, 1332.0059968889086), (722.11693940608109, 968.44163864470772, 1407.2647374623784, 1275.4943861373995), (186.81801952471716, 574.06424068210754, 2309.713128194051, 2027.8794882082852), (542.84095639695511, 855.82312742713134, 1496.742757209314, 1268.3531356952394)], [(733.22154948262346, 1090.2120006112123, 1637.9954523512265, 1547.0317280811264), (474.7348936613177, 804.06913016023191, 1751.5257005238557, 1501.3828445901991), (947.21067749836504, 1404.6748218840796, 2205.2052994962778, 2316.1508715660839), (186.81583782221881, 574.06494057537054, 2309.713128194051, 2027.8794882082852), (537.24694053012877, 850.7776957479598, 1501.360522799956, 1282.1858512448739)], [(493.30826451427174, 800.2144694116289, 1881.7930950937709, 2074.8452298917582), (6.9148356107422249, 19.678373303595652, 1446.8555020854353, 1296.6072661302419), (717.30772340499743, 1252.6406464270533, 2215.932695725136, 4024.0606078921301), (134.1889539586864, 473.58452382204246, 2259.0333137484595, 1848.2104971390795), (368.18075808175627, 643.80279705184921, 1316.9553010791813, 826.77416952119188)], [(529.06919082707532, 828.70110746243085, 1894.8093187652535, 2148.1751030741189), (16.719926930397797, 44.163392171990552, 1291.7498779182542, 1216.1033916484544), (1191.2693238539691, 1947.2006442917614, 2444.1589561754326, 4225.0808925205765), (134.1889539586864, 473.58452382204246, 2259.0333137484595, 1848.2104971390795), (368.18075808175632, 643.80279705184898, 1316.955301079181, 826.77416952119188)], [(794.26222957364075, 1396.0068386556045, 2925.4212707024235, 2985.3760833289266), (564.82741396324946, 1036.2401800472778, 2527.5702432570938, 2527.2989355610052), (831.89993492074348, 1981.49156657561, 2665.1127504752535, 3046.043386035919), (286.0519206726006, 719.85176371927844, 2571.1304504463251, 2895.9935365181314), (538.63077483596828, 1039.8146450969432, 2739.9881318113967, 2878.4238925143554)]]
+['initial set', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Selected features']
+We dont see this
+{'n_estimators': 50, 'criterion': 'mse', 'min_samples_leaf': 2}
+Feature importance random forest:
+acc_watch_y_temp_mean_ws_120  &  0.465671766017
+press_phone_pressure_temp_mean_ws_120  &  0.136759358967
+mag_watch_x_temp_mean_ws_120  &  0.0401415231037
+labelEating  &  0.0377778295227
+temp_pattern_labelEating(b)labelEating  &  0.0333252287844
+temp_pattern_labelEating  &  0.0291596105299
+mag_watch_y_temp_mean_ws_120  &  0.0278364454486
+pca_4_temp_mean_ws_120  &  0.0148416019711
+gyr_phone_z_temp_mean_ws_120  &  0.0123043559851
+acc_watch_x_temp_mean_ws_120  &  0.0117681780471
+pca_7_temp_mean_ws_120  &  0.0117037666718
+gyr_watch_y_temp_std_ws_120  &  0.010389469499
+mag_watch_y_temp_std_ws_120  &  0.00930481740033
+press_phone_pressure_temp_std_ws_120  &  0.00864370787104
+acc_phone_y_temp_mean_ws_120  &  0.00745956207021
+gyr_watch_y_temp_mean_ws_120  &  0.00741556402335
+pca_7  &  0.00567566206537
+mag_watch_x_freq_0.0_Hz_ws_40  &  0.00499264303819
+pca_3_temp_mean_ws_120  &  0.00460471538577
+mag_watch_z_temp_mean_ws_120  &  0.00424385486836
+pca_6_temp_mean_ws_120  &  0.00353430676887
+pca_2_temp_mean_ws_120  &  0.0033239087677
+mag_watch_x_temp_std_ws_120  &  0.00306954975545
+acc_phone_x_temp_mean_ws_120  &  0.00306129047807
+mag_watch_y  &  0.00266265870673
+pca_5_temp_mean_ws_120  &  0.00254633421867
+mag_phone_y_temp_mean_ws_120  &  0.00248316913396
+acc_phone_x_freq_0.0_Hz_ws_40  &  0.00244607461073
+mag_watch_z_temp_std_ws_120  &  0.00238896679992
+gyr_watch_x_temp_mean_ws_120  &  0.00237875925506
+gyr_phone_y_temp_mean_ws_120  &  0.00234171806157
+mag_watch_y_freq_0.4_Hz_ws_40  &  0.00231478548499
+pca_7_temp_std_ws_120  &  0.00228613780265
+pca_1_temp_mean_ws_120  &  0.00228065475094
+gyr_watch_x_temp_std_ws_120  &  0.00223158614589
+acc_watch_y_temp_std_ws_120  &  0.00201893173323
+acc_watch_z_temp_mean_ws_120  &  0.00189288192663
+mag_watch_z_freq_0.0_Hz_ws_40  &  0.00188228386361
+mag_phone_x_temp_mean_ws_120  &  0.00183293207384
+mag_phone_z_temp_mean_ws_120  &  0.00179759278892
+gyr_watch_z_temp_std_ws_120  &  0.00163149942232
+acc_phone_z_freq_0.0_Hz_ws_40  &  0.00160789460062
+acc_phone_y_freq_0.0_Hz_ws_40  &  0.00151570256849
+gyr_phone_x_temp_std_ws_120  &  0.00142589074997
+mag_phone_z_temp_std_ws_120  &  0.00132984638618
+pca_4_temp_std_ws_120  &  0.00132980283954
+acc_watch_x_temp_std_ws_120  &  0.00127389774408
+acc_phone_z_temp_mean_ws_120  &  0.00126870945902
+gyr_phone_y_temp_std_ws_120  &  0.00119326898249
+mag_phone_x_freq_0.0_Hz_ws_40  &  0.00113559380164
+mag_watch_y_freq_0.0_Hz_ws_40  &  0.00113215306379
+acc_watch_z_freq_0.0_Hz_ws_40  &  0.00107948097581
+acc_watch_z_temp_std_ws_120  &  0.0010516341915
+mag_phone_x_temp_std_ws_120  &  0.00103530812072
+gyr_watch_x_freq_0.0_Hz_ws_40  &  0.00103229190249
+mag_phone_y_freq_0.0_Hz_ws_40  &  0.00100167650302
+acc_phone_y_temp_std_ws_120  &  0.00100047140161
+gyr_watch_y_freq_0.0_Hz_ws_40  &  0.000994389464188
+mag_phone_y_temp_std_ws_120  &  0.000953241845257
+acc_phone_y  &  0.000925325766547
+pca_6_temp_std_ws_120  &  0.000896637528024
+acc_phone_z_pse  &  0.000786921623195
+pca_3_temp_std_ws_120  &  0.000784099204492
+mag_phone_y_max_freq  &  0.000777282077785
+mag_phone_y  &  0.000731203338544
+mag_phone_z_freq_0.0_Hz_ws_40  &  0.00070487797421
+acc_watch_y_freq_0.0_Hz_ws_40  &  0.000689742959425
+gyr_phone_x_freq_1.1_Hz_ws_40  &  0.000678000304487
+gyr_phone_z_temp_std_ws_120  &  0.000677438950932
+acc_phone_x  &  0.000662878151471
+light_phone_lux_temp_std_ws_120  &  0.000657381151652
+acc_watch_x_freq_0.0_Hz_ws_40  &  0.000637023562388
+pca_4  &  0.000604440527526
+acc_watch_z  &  0.000603968949373
+acc_phone_x_temp_std_ws_120  &  0.000600217592668
+acc_phone_z_temp_std_ws_120  &  0.000591283076536
+temp_pattern_labelDriving(b)labelDriving  &  0.000543244410683
+mag_watch_x  &  0.000518709879174
+pca_5_temp_std_ws_120  &  0.000517270811689
+mag_phone_z  &  0.000508467632264
+gyr_watch_z_temp_mean_ws_120  &  0.000489600702798
+gyr_phone_x_temp_mean_ws_120  &  0.000457659429974
+gyr_phone_z_freq_0.0_Hz_ws_40  &  0.00045091034022
+pca_1_temp_std_ws_120  &  0.000448617384368
+gyr_phone_z_freq_1.5_Hz_ws_40  &  0.000430717063798
+pca_5  &  0.000428800050003
+pca_6  &  0.000427130133953
+light_phone_lux_temp_mean_ws_120  &  0.000400702988488
+pca_3  &  0.000374503725427
+acc_phone_y_pse  &  0.000362393359598
+acc_watch_x_freq_1.1_Hz_ws_40  &  0.00036227033407
+mag_phone_x_pse  &  0.000358879362177
+gyr_watch_z_pse  &  0.000350443552716
+mag_phone_y_pse  &  0.000340702995883
+acc_phone_y_freq_0.7_Hz_ws_40  &  0.000317585223302
+acc_watch_y_freq_1.5_Hz_ws_40  &  0.000307776113618
+gyr_phone_x_freq_0.0_Hz_ws_40  &  0.000302459120094
+pca_2  &  0.000288333135902
+mag_watch_y_freq_1.9_Hz_ws_40  &  0.000286881191164
+mag_phone_x  &  0.000286732060993
+mag_watch_y_pse  &  0.000284297607634
+mag_watch_z  &  0.00028228604475
+gyr_watch_x_freq_1.1_Hz_ws_40  &  0.000275975587721
+gyr_phone_x_pse  &  0.000269579690389
+mag_phone_x_freq_1.1_Hz_ws_40  &  0.000257903967103
+mag_watch_z_pse  &  0.00025545764742
+mag_watch_x_pse  &  0.000253116637628
+acc_watch_y  &  0.000247992150706
+gyr_phone_x_freq_1.5_Hz_ws_40  &  0.000247966427533
+gyr_phone_y_pse  &  0.000242905950586
+acc_watch_y_pse  &  0.000240970565693
+gyr_watch_z_freq_0.7_Hz_ws_40  &  0.00023509101102
+gyr_phone_y_freq_1.5_Hz_ws_40  &  0.00023321701632
+gyr_phone_z_pse  &  0.000231248130991
+pca_1  &  0.000230871722458
+mag_watch_z_freq_weighted  &  0.000225316760811
+gyr_watch_x_freq_0.7_Hz_ws_40  &  0.000223143623051
+acc_watch_y_freq_1.1_Hz_ws_40  &  0.000214514404884
+mag_watch_x_freq_0.4_Hz_ws_40  &  0.000213175480211
+acc_phone_x_pse  &  0.000206250362978
+acc_phone_z_freq_1.5_Hz_ws_40  &  0.000200474747801
+acc_watch_z_pse  &  0.00019608285142
+acc_watch_z_freq_0.4_Hz_ws_40  &  0.00019353846597
+mag_watch_z_freq_0.4_Hz_ws_40  &  0.000190709044866
+mag_watch_y_freq_1.5_Hz_ws_40  &  0.000189385459475
+mag_watch_x_freq_weighted  &  0.000184494368262
+acc_phone_z  &  0.000179299777832
+labelDriving  &  0.000177078404009
+acc_watch_x_freq_0.7_Hz_ws_40  &  0.00017142908748
+acc_watch_z_freq_1.5_Hz_ws_40  &  0.000171209146221
+mag_watch_x_freq_1.9_Hz_ws_40  &  0.000170988407624
+mag_phone_x_freq_1.2_Hz_ws_40  &  0.000165747814681
+mag_watch_y_freq_1.1_Hz_ws_40  &  0.000162317153389
+mag_phone_y_freq_1.5_Hz_ws_40  &  0.000154818553676
+gyr_watch_y_freq_1.5_Hz_ws_40  &  0.000154078751718
+acc_phone_y_freq_0.4_Hz_ws_40  &  0.000149543650381
+gyr_phone_z_freq_0.7_Hz_ws_40  &  0.000146948813743
+acc_phone_z_freq_0.4_Hz_ws_40  &  0.000146242332299
+pca_2_temp_std_ws_120  &  0.000145492437822
+acc_phone_x_freq_1.1_Hz_ws_40  &  0.000144664238461
+gyr_watch_y_freq_1.1_Hz_ws_40  &  0.000141768213736
+acc_phone_x_freq_1.5_Hz_ws_40  &  0.000138567333366
+gyr_watch_y_freq_0.1_Hz_ws_40  &  0.000137711375801
+mag_phone_z_freq_0.4_Hz_ws_40  &  0.00013710571987
+gyr_watch_z_freq_0.0_Hz_ws_40  &  0.000132621685369
+mag_phone_y_freq_0.4_Hz_ws_40  &  0.000131548977091
+mag_watch_x_freq_0.3_Hz_ws_40  &  0.000131219395373
+labelWashingHands  &  0.000127445529916
+mag_phone_x_freq_0.4_Hz_ws_40  &  0.000125274920185
+gyr_phone_z_freq_1.1_Hz_ws_40  &  0.000122529555493
+mag_watch_z_freq_1.6_Hz_ws_40  &  0.000119244849668
+mag_phone_z_pse  &  0.00011815220106
+gyr_phone_y_freq_1.1_Hz_ws_40  &  0.00011787631365
+gyr_watch_x_freq_1.5_Hz_ws_40  &  0.000115582744571
+gyr_phone_y_freq_0.0_Hz_ws_40  &  0.000115483146751
+press_phone_pressure  &  0.000113398529752
+mag_phone_x_max_freq  &  0.000111742636795
+mag_phone_z_freq_1.5_Hz_ws_40  &  0.000108923709695
+acc_phone_y_freq_1.8_Hz_ws_40  &  0.000107753583877
+gyr_watch_y_freq_0.4_Hz_ws_40  &  0.000105930110551
+mag_watch_x_freq_1.5_Hz_ws_40  &  0.000105685853207
+acc_watch_x_pse  &  0.000102019372018
+gyr_watch_z_freq_1.1_Hz_ws_40  &  0.000100915164536
+acc_phone_z_freq_1.9_Hz_ws_40  &  0.000100767336081
+gyr_phone_x_freq_0.7_Hz_ws_40  &  9.99026784223e-05
+acc_watch_z_freq_0.7_Hz_ws_40  &  9.86095811075e-05
+gyr_phone_z_freq_0.4_Hz_ws_40  &  9.84521439653e-05
+mag_phone_y_freq_1.1_Hz_ws_40  &  9.36807142212e-05
+acc_phone_y_freq_1.5_Hz_ws_40  &  9.27934280706e-05
+gyr_phone_y_freq_weighted  &  9.09396705986e-05
+gyr_watch_z_freq_0.8_Hz_ws_40  &  9.08948706024e-05
+mag_watch_z_freq_1.5_Hz_ws_40  &  9.06662904353e-05
+gyr_watch_z_freq_1.5_Hz_ws_40  &  8.95441371273e-05
+mag_phone_x_freq_1.5_Hz_ws_40  &  8.88968797252e-05
+acc_phone_x_freq_0.4_Hz_ws_40  &  8.82987192775e-05
+gyr_watch_y_freq_0.9_Hz_ws_40  &  8.48034972604e-05
+mag_phone_y_freq_1.7_Hz_ws_40  &  8.33471579985e-05
+mag_phone_z_freq_0.7_Hz_ws_40  &  8.32387168749e-05
+acc_phone_y_freq_0.8_Hz_ws_40  &  8.32231052262e-05
+acc_watch_x_freq_0.6_Hz_ws_40  &  8.22828198443e-05
+acc_watch_x_freq_0.4_Hz_ws_40  &  8.15213207245e-05
+acc_watch_x_freq_0.2_Hz_ws_40  &  8.12081243664e-05
+acc_phone_x_freq_0.2_Hz_ws_40  &  8.07286397429e-05
+acc_phone_y_freq_1.1_Hz_ws_40  &  8.02584701229e-05
+mag_watch_x_freq_1.4_Hz_ws_40  &  7.99252128901e-05
+acc_watch_z_freq_1.1_Hz_ws_40  &  7.94425869125e-05
+acc_watch_y_freq_0.8_Hz_ws_40  &  7.82089371245e-05
+mag_watch_y_freq_0.2_Hz_ws_40  &  7.74629501859e-05
+gyr_phone_x_freq_1.3_Hz_ws_40  &  7.64908960701e-05
+gyr_watch_x_freq_0.4_Hz_ws_40  &  7.61318444252e-05
+mag_phone_x_freq_1.4_Hz_ws_40  &  7.60166569516e-05
+mag_watch_z_freq_0.3_Hz_ws_40  &  7.53384495049e-05
+gyr_watch_z_freq_1.6_Hz_ws_40  &  7.42386485643e-05
+acc_watch_x_freq_1.5_Hz_ws_40  &  7.41238351474e-05
+gyr_watch_y_freq_1.0_Hz_ws_40  &  7.34663309501e-05
+acc_phone_y_freq_1.6_Hz_ws_40  &  7.32948323502e-05
+gyr_watch_y_pse  &  7.27527697769e-05
+gyr_watch_z_freq_0.4_Hz_ws_40  &  7.18836712148e-05
+mag_phone_z_freq_weighted  &  7.02446654378e-05
+acc_watch_y_freq_0.7_Hz_ws_40  &  6.98619603946e-05
+mag_watch_y_freq_1.6_Hz_ws_40  &  6.9571370457e-05
+gyr_watch_z_freq_0.6_Hz_ws_40  &  6.78739542731e-05
+gyr_watch_y_freq_0.6_Hz_ws_40  &  6.6068641503e-05
+mag_phone_y_freq_1.2_Hz_ws_40  &  6.57449473839e-05
+acc_phone_x_freq_1.6_Hz_ws_40  &  6.54667154659e-05
+acc_phone_z_freq_0.6_Hz_ws_40  &  6.54541356262e-05
+gyr_phone_y_max_freq  &  6.49678455199e-05
+mag_watch_y_freq_0.7_Hz_ws_40  &  6.47862469702e-05
+mag_watch_y_freq_0.8_Hz_ws_40  &  6.43314788238e-05
+mag_phone_x_freq_weighted  &  6.387191788e-05
+mag_watch_z_freq_1.1_Hz_ws_40  &  6.36823416431e-05
+mag_watch_y_freq_weighted  &  6.36742545972e-05
+mag_phone_y_freq_0.7_Hz_ws_40  &  6.36509196882e-05
+mag_phone_z_freq_1.1_Hz_ws_40  &  6.32943543604e-05
+gyr_watch_x_pse  &  6.31457555418e-05
+mag_watch_x_freq_1.1_Hz_ws_40  &  6.30728516057e-05
+mag_phone_y_freq_1.8_Hz_ws_40  &  6.23793205275e-05
+acc_watch_z_freq_0.5_Hz_ws_40  &  6.16248295846e-05
+mag_phone_x_freq_0.7_Hz_ws_40  &  6.14258638104e-05
+mag_phone_y_freq_1.9_Hz_ws_40  &  6.09735867051e-05
+mag_watch_y_freq_0.3_Hz_ws_40  &  6.09038542397e-05
+mag_phone_x_freq_2.0_Hz_ws_40  &  5.94548614428e-05
+gyr_watch_y_max_freq  &  5.81501793849e-05
+mag_watch_x_freq_0.8_Hz_ws_40  &  5.73222626293e-05
+gyr_watch_y_freq_0.5_Hz_ws_40  &  5.65093104236e-05
+mag_watch_z_freq_0.8_Hz_ws_40  &  5.56934910184e-05
+mag_watch_z_freq_1.4_Hz_ws_40  &  5.48431179781e-05
+acc_watch_x_freq_1.9_Hz_ws_40  &  5.46428327639e-05
+gyr_phone_y_freq_0.3_Hz_ws_40  &  5.45279360172e-05
+mag_phone_y_freq_1.6_Hz_ws_40  &  5.35191818971e-05
+gyr_watch_y_freq_1.3_Hz_ws_40  &  5.22503669559e-05
+gyr_watch_y_freq_0.7_Hz_ws_40  &  5.15966538815e-05
+gyr_phone_y_freq_0.4_Hz_ws_40  &  5.08104642766e-05
+mag_watch_x_max_freq  &  5.06588628362e-05
+gyr_phone_x_freq_2.0_Hz_ws_40  &  5.05389931579e-05
+mag_watch_y_freq_1.7_Hz_ws_40  &  4.98715228584e-05
+mag_phone_z_freq_1.2_Hz_ws_40  &  4.96644382685e-05
+gyr_watch_z_freq_1.4_Hz_ws_40  &  4.89061316907e-05
+cluster  &  4.68171874519e-05
+mag_phone_x_freq_1.0_Hz_ws_40  &  4.67875385828e-05
+gyr_phone_y_freq_1.8_Hz_ws_40  &  4.66500325296e-05
+mag_phone_x_freq_1.9_Hz_ws_40  &  4.52887981612e-05
+mag_phone_x_freq_0.6_Hz_ws_40  &  4.52551395331e-05
+acc_watch_z_freq_1.4_Hz_ws_40  &  4.45744365539e-05
+acc_phone_z_freq_1.4_Hz_ws_40  &  4.38253614107e-05
+mag_phone_y_freq_0.3_Hz_ws_40  &  4.35249249546e-05
+acc_watch_x  &  4.31935141959e-05
+gyr_watch_z_freq_weighted  &  4.29664205149e-05
+mag_watch_x_freq_0.7_Hz_ws_40  &  4.26359161583e-05
+acc_phone_z_freq_1.7_Hz_ws_40  &  4.2466970261e-05
+mag_phone_x_freq_0.1_Hz_ws_40  &  4.24199339061e-05
+acc_phone_z_freq_weighted  &  4.21156059824e-05
+gyr_watch_y_freq_1.6_Hz_ws_40  &  4.20495307171e-05
+acc_phone_z_freq_1.6_Hz_ws_40  &  4.1777867948e-05
+gyr_phone_y_freq_1.9_Hz_ws_40  &  4.06494073723e-05
+acc_phone_x_freq_0.8_Hz_ws_40  &  4.03695835242e-05
+mag_watch_x_freq_0.2_Hz_ws_40  &  4.02411539324e-05
+mag_phone_x_freq_0.3_Hz_ws_40  &  3.9917893103e-05
+mag_watch_z_freq_1.2_Hz_ws_40  &  3.98624133823e-05
+acc_phone_z_freq_0.8_Hz_ws_40  &  3.95138336361e-05
+temp_pattern_labelSitting  &  3.94126329964e-05
+acc_phone_x_freq_1.7_Hz_ws_40  &  3.93890114282e-05
+acc_watch_y_freq_0.4_Hz_ws_40  &  3.93167232176e-05
+gyr_phone_z_freq_1.7_Hz_ws_40  &  3.9296254694e-05
+gyr_phone_y_freq_2.0_Hz_ws_40  &  3.92917444595e-05
+mag_watch_x_freq_1.3_Hz_ws_40  &  3.8950286549e-05
+gyr_phone_x_freq_0.8_Hz_ws_40  &  3.89267008019e-05
+acc_phone_x_freq_0.7_Hz_ws_40  &  3.87593449589e-05
+acc_phone_x_freq_weighted  &  3.87481975114e-05
+acc_phone_z_freq_1.1_Hz_ws_40  &  3.8518346059e-05
+gyr_phone_y_freq_1.7_Hz_ws_40  &  3.82718637308e-05
+acc_phone_z_freq_0.5_Hz_ws_40  &  3.81147741573e-05
+mag_watch_y_freq_0.6_Hz_ws_40  &  3.80210554842e-05
+acc_phone_y_freq_2.0_Hz_ws_40  &  3.73224590342e-05
+mag_phone_x_freq_1.3_Hz_ws_40  &  3.72502393946e-05
+acc_phone_x_freq_0.3_Hz_ws_40  &  3.70076139658e-05
+acc_phone_z_freq_1.0_Hz_ws_40  &  3.69942180762e-05
+acc_watch_y_freq_1.9_Hz_ws_40  &  3.68430975135e-05
+mag_watch_z_freq_1.0_Hz_ws_40  &  3.66888100892e-05
+acc_phone_y_freq_0.1_Hz_ws_40  &  3.66139367324e-05
+mag_phone_y_freq_1.3_Hz_ws_40  &  3.62668556731e-05
+gyr_watch_y_freq_1.8_Hz_ws_40  &  3.59137306174e-05
+acc_watch_z_freq_1.7_Hz_ws_40  &  3.55400622796e-05
+acc_watch_y_freq_1.0_Hz_ws_40  &  3.52906070606e-05
+acc_watch_z_freq_0.6_Hz_ws_40  &  3.51161436175e-05
+gyr_phone_y  &  3.50694155329e-05
+mag_phone_x_freq_0.5_Hz_ws_40  &  3.50370138408e-05
+gyr_watch_x_max_freq  &  3.4226722272e-05
+gyr_watch_z_freq_0.5_Hz_ws_40  &  3.41747965317e-05
+gyr_watch_y_freq_1.4_Hz_ws_40  &  3.41164008738e-05
+acc_phone_z_freq_0.1_Hz_ws_40  &  3.39813969307e-05
+mag_phone_z_freq_0.8_Hz_ws_40  &  3.38273489852e-05
+acc_watch_z_freq_2.0_Hz_ws_40  &  3.35748512731e-05
+acc_phone_y_freq_0.5_Hz_ws_40  &  3.35631225595e-05
+mag_phone_y_freq_1.0_Hz_ws_40  &  3.32923287377e-05
+gyr_watch_z_freq_0.3_Hz_ws_40  &  3.30767338757e-05
+mag_watch_z_freq_1.9_Hz_ws_40  &  3.30005255088e-05
+acc_phone_x_freq_1.8_Hz_ws_40  &  3.29923018855e-05
+mag_phone_z_freq_0.1_Hz_ws_40  &  3.27635453621e-05
+acc_phone_z_max_freq  &  3.27462094871e-05
+mag_watch_x_freq_1.6_Hz_ws_40  &  3.24324235859e-05
+gyr_phone_x_freq_weighted  &  3.23988433058e-05
+gyr_watch_y_freq_weighted  &  3.2169212866e-05
+acc_phone_x_freq_0.9_Hz_ws_40  &  3.20976476707e-05
+acc_watch_z_freq_1.3_Hz_ws_40  &  3.20200474188e-05
+gyr_phone_z_freq_1.2_Hz_ws_40  &  3.20060882357e-05
+gyr_watch_x_freq_0.8_Hz_ws_40  &  3.19708016906e-05
+acc_watch_x_freq_0.5_Hz_ws_40  &  3.19084286459e-05
+gyr_watch_y_freq_1.2_Hz_ws_40  &  3.18675806771e-05
+gyr_watch_y_freq_0.3_Hz_ws_40  &  3.17600755873e-05
+mag_watch_y_freq_2.0_Hz_ws_40  &  3.17067059349e-05
+mag_watch_z_freq_2.0_Hz_ws_40  &  3.16762851363e-05
+mag_watch_y_freq_1.4_Hz_ws_40  &  3.15893810428e-05
+mag_watch_z_freq_0.7_Hz_ws_40  &  3.1397197766e-05
+mag_watch_x_freq_1.0_Hz_ws_40  &  3.11180594724e-05
+mag_phone_z_freq_1.9_Hz_ws_40  &  3.10106256799e-05
+mag_phone_y_freq_weighted  &  3.05753252188e-05
+gyr_watch_x_freq_1.4_Hz_ws_40  &  3.05467701543e-05
+gyr_phone_z_freq_0.3_Hz_ws_40  &  3.04029020983e-05
+mag_phone_z_freq_1.8_Hz_ws_40  &  3.02032462618e-05
+acc_watch_y_freq_1.4_Hz_ws_40  &  3.01153038263e-05
+gyr_phone_z_freq_weighted  &  3.00173398559e-05
+gyr_phone_y_freq_1.2_Hz_ws_40  &  2.98870087445e-05
+gyr_watch_z_freq_0.1_Hz_ws_40  &  2.97808484853e-05
+mag_watch_y_freq_0.1_Hz_ws_40  &  2.96274603136e-05
+gyr_phone_z_freq_1.8_Hz_ws_40  &  2.95660623083e-05
+gyr_watch_y  &  2.94928073325e-05
+acc_phone_y_max_freq  &  2.94761205684e-05
+gyr_watch_x_freq_1.2_Hz_ws_40  &  2.92914338631e-05
+mag_watch_x_freq_0.9_Hz_ws_40  &  2.83827099955e-05
+mag_phone_x_freq_0.8_Hz_ws_40  &  2.82532837864e-05
+gyr_phone_x_freq_0.4_Hz_ws_40  &  2.81140940552e-05
+gyr_phone_x_freq_1.6_Hz_ws_40  &  2.81027187173e-05
+acc_phone_z_freq_1.2_Hz_ws_40  &  2.80980601821e-05
+acc_phone_y_freq_1.7_Hz_ws_40  &  2.80756184783e-05
+gyr_phone_y_freq_0.7_Hz_ws_40  &  2.76494957461e-05
+gyr_phone_z_freq_0.8_Hz_ws_40  &  2.76134170702e-05
+gyr_watch_x_freq_weighted  &  2.75461732478e-05
+mag_phone_x_freq_0.2_Hz_ws_40  &  2.75268051191e-05
+gyr_phone_y_freq_1.6_Hz_ws_40  &  2.74104226339e-05
+acc_watch_x_freq_1.4_Hz_ws_40  &  2.71274252341e-05
+gyr_watch_z_freq_1.2_Hz_ws_40  &  2.70029838976e-05
+acc_watch_z_freq_1.2_Hz_ws_40  &  2.69037671452e-05
+gyr_phone_z_max_freq  &  2.68824035024e-05
+acc_phone_y_freq_1.2_Hz_ws_40  &  2.67250617559e-05
+gyr_phone_z_freq_1.3_Hz_ws_40  &  2.67171909707e-05
+acc_phone_x_freq_0.5_Hz_ws_40  &  2.67158363344e-05
+gyr_phone_z_freq_1.6_Hz_ws_40  &  2.6434970285e-05
+acc_phone_x_freq_1.2_Hz_ws_40  &  2.6398646794e-05
+acc_phone_y_freq_1.0_Hz_ws_40  &  2.63584564738e-05
+acc_phone_y_freq_0.3_Hz_ws_40  &  2.61039325745e-05
+acc_watch_y_freq_1.6_Hz_ws_40  &  2.60835501275e-05
+mag_phone_z_freq_1.4_Hz_ws_40  &  2.59894480283e-05
+acc_phone_y_freq_1.4_Hz_ws_40  &  2.58836593046e-05
+mag_watch_x_freq_1.2_Hz_ws_40  &  2.57915810856e-05
+acc_watch_x_freq_2.0_Hz_ws_40  &  2.55998700366e-05
+gyr_phone_z_freq_1.0_Hz_ws_40  &  2.54637816071e-05
+acc_watch_x_freq_0.1_Hz_ws_40  &  2.51359880547e-05
+mag_watch_z_freq_0.9_Hz_ws_40  &  2.46461775878e-05
+mag_watch_y_freq_0.5_Hz_ws_40  &  2.44437256792e-05
+mag_watch_y_freq_1.2_Hz_ws_40  &  2.42208701054e-05
+mag_watch_z_max_freq  &  2.38849220941e-05
+acc_watch_x_freq_1.2_Hz_ws_40  &  2.3830002923e-05
+acc_watch_y_freq_2.0_Hz_ws_40  &  2.38046714089e-05
+mag_phone_z_freq_1.6_Hz_ws_40  &  2.37660471416e-05
+mag_phone_y_freq_1.4_Hz_ws_40  &  2.35563189623e-05
+mag_phone_x_freq_0.9_Hz_ws_40  &  2.31523409944e-05
+mag_phone_z_freq_1.3_Hz_ws_40  &  2.30258927017e-05
+mag_phone_z_freq_0.3_Hz_ws_40  &  2.2752903796e-05
+mag_phone_y_freq_0.8_Hz_ws_40  &  2.26447659211e-05
+mag_watch_z_freq_1.8_Hz_ws_40  &  2.24944816682e-05
+gyr_watch_z_max_freq  &  2.2148865033e-05
+light_phone_lux  &  2.21245853491e-05
+gyr_watch_x_freq_1.9_Hz_ws_40  &  2.17605584843e-05
+gyr_watch_x_freq_0.3_Hz_ws_40  &  2.1736906874e-05
+acc_phone_y_freq_weighted  &  2.16622721958e-05
+acc_watch_z_freq_0.9_Hz_ws_40  &  2.16541265501e-05
+mag_watch_x_freq_1.8_Hz_ws_40  &  2.14125482212e-05
+gyr_watch_x_freq_1.0_Hz_ws_40  &  2.13644572605e-05
+gyr_phone_x_max_freq  &  2.13345841079e-05
+acc_watch_x_freq_1.6_Hz_ws_40  &  2.10630760267e-05
+acc_watch_y_freq_0.9_Hz_ws_40  &  2.0897649392e-05
+gyr_phone_y_freq_1.3_Hz_ws_40  &  2.08647641452e-05
+acc_phone_y_freq_0.2_Hz_ws_40  &  2.07847765615e-05
+acc_watch_y_freq_weighted  &  2.05770477444e-05
+mag_watch_z_freq_0.1_Hz_ws_40  &  2.05524393588e-05
+mag_phone_z_freq_0.9_Hz_ws_40  &  2.02017711419e-05
+gyr_watch_z_freq_1.0_Hz_ws_40  &  1.97841281184e-05
+gyr_phone_x_freq_1.4_Hz_ws_40  &  1.97315149843e-05
+gyr_watch_x_freq_0.2_Hz_ws_40  &  1.97012618727e-05
+acc_watch_y_max_freq  &  1.9606641401e-05
+acc_phone_y_freq_0.9_Hz_ws_40  &  1.94507827346e-05
+mag_watch_y_freq_1.0_Hz_ws_40  &  1.90061034303e-05
+acc_phone_z_freq_0.2_Hz_ws_40  &  1.89460273519e-05
+mag_phone_x_freq_1.6_Hz_ws_40  &  1.8738342241e-05
+acc_watch_y_freq_1.8_Hz_ws_40  &  1.85192659955e-05
+acc_watch_x_freq_1.0_Hz_ws_40  &  1.83830146237e-05
+acc_phone_z_freq_0.9_Hz_ws_40  &  1.83238761622e-05
+gyr_phone_z_freq_0.2_Hz_ws_40  &  1.83086159017e-05
+acc_phone_y_freq_1.9_Hz_ws_40  &  1.82374093191e-05
+acc_phone_x_freq_1.9_Hz_ws_40  &  1.81910813978e-05
+gyr_watch_x_freq_0.5_Hz_ws_40  &  1.79862521664e-05
+gyr_watch_y_freq_1.7_Hz_ws_40  &  1.77509214766e-05
+mag_watch_z_freq_0.5_Hz_ws_40  &  1.74015625324e-05
+gyr_watch_z_freq_1.8_Hz_ws_40  &  1.72195193075e-05
+acc_phone_z_freq_0.7_Hz_ws_40  &  1.71916229334e-05
+gyr_watch_z_freq_2.0_Hz_ws_40  &  1.67405220252e-05
+gyr_phone_y_freq_1.4_Hz_ws_40  &  1.67214785085e-05
+gyr_watch_x_freq_0.9_Hz_ws_40  &  1.67167814148e-05
+mag_phone_y_freq_0.1_Hz_ws_40  &  1.65693003528e-05
+acc_phone_x_freq_1.0_Hz_ws_40  &  1.64090224015e-05
+gyr_phone_y_freq_0.1_Hz_ws_40  &  1.63945139535e-05
+gyr_watch_y_freq_0.8_Hz_ws_40  &  1.60627578004e-05
+gyr_watch_z_freq_0.2_Hz_ws_40  &  1.58309964134e-05
+gyr_watch_x_freq_0.6_Hz_ws_40  &  1.57602681229e-05
+mag_phone_y_freq_2.0_Hz_ws_40  &  1.56160112862e-05
+acc_watch_y_freq_1.2_Hz_ws_40  &  1.54665468134e-05
+acc_phone_z_freq_0.3_Hz_ws_40  &  1.53958630032e-05
+gyr_watch_y_freq_0.2_Hz_ws_40  &  1.53827437996e-05
+acc_phone_z_freq_1.3_Hz_ws_40  &  1.52776470097e-05
+mag_watch_x_freq_0.6_Hz_ws_40  &  1.50964702954e-05
+gyr_phone_x_freq_0.3_Hz_ws_40  &  1.50861822233e-05
+mag_watch_x_freq_0.5_Hz_ws_40  &  1.50373417534e-05
+gyr_watch_z  &  1.4833440774e-05
+acc_watch_z_freq_weighted  &  1.46392321112e-05
+acc_watch_z_freq_0.3_Hz_ws_40  &  1.45410265533e-05
+gyr_phone_y_freq_1.0_Hz_ws_40  &  1.4388312914e-05
+acc_phone_x_freq_1.3_Hz_ws_40  &  1.43702431214e-05
+mag_phone_y_freq_0.5_Hz_ws_40  &  1.42387045679e-05
+gyr_phone_z_freq_1.4_Hz_ws_40  &  1.41226373953e-05
+gyr_phone_y_freq_0.5_Hz_ws_40  &  1.4117373599e-05
+gyr_phone_z_freq_0.1_Hz_ws_40  &  1.40200798879e-05
+acc_phone_x_freq_1.4_Hz_ws_40  &  1.38273170891e-05
+gyr_phone_x_freq_0.9_Hz_ws_40  &  1.38104107109e-05
+gyr_phone_x_freq_0.5_Hz_ws_40  &  1.36835013919e-05
+gyr_phone_z_freq_1.9_Hz_ws_40  &  1.34365539637e-05
+mag_phone_y_freq_0.2_Hz_ws_40  &  1.33720490193e-05
+gyr_phone_x_freq_0.1_Hz_ws_40  &  1.32655037215e-05
+gyr_phone_y_freq_0.9_Hz_ws_40  &  1.32375549179e-05
+mag_phone_z_freq_1.0_Hz_ws_40  &  1.3218730199e-05
+acc_watch_z_freq_1.8_Hz_ws_40  &  1.31270757288e-05
+gyr_phone_x_freq_0.2_Hz_ws_40  &  1.3068595582e-05
+acc_phone_y_freq_1.3_Hz_ws_40  &  1.30076297308e-05
+gyr_watch_y_freq_1.9_Hz_ws_40  &  1.28639392898e-05
+gyr_phone_x_freq_1.2_Hz_ws_40  &  1.28483343646e-05
+acc_phone_x_freq_0.6_Hz_ws_40  &  1.27885658565e-05
+gyr_watch_y_freq_2.0_Hz_ws_40  &  1.27440097452e-05
+acc_watch_y_freq_0.3_Hz_ws_40  &  1.26554347777e-05
+gyr_phone_z_freq_0.5_Hz_ws_40  &  1.26306196104e-05
+acc_phone_x_max_freq  &  1.24744077747e-05
+acc_watch_y_freq_1.7_Hz_ws_40  &  1.24356767568e-05
+gyr_watch_x_freq_1.3_Hz_ws_40  &  1.23456697047e-05
+acc_watch_y_freq_0.1_Hz_ws_40  &  1.22958392133e-05
+mag_watch_z_freq_1.3_Hz_ws_40  &  1.22692086346e-05
+gyr_phone_z_freq_2.0_Hz_ws_40  &  1.15185618634e-05
+mag_phone_z_freq_0.2_Hz_ws_40  &  1.14576830763e-05
+gyr_watch_z_freq_1.3_Hz_ws_40  &  1.14435033717e-05
+mag_watch_x_freq_0.1_Hz_ws_40  &  1.13768440077e-05
+acc_phone_y_freq_0.6_Hz_ws_40  &  1.1358842031e-05
+gyr_phone_x_freq_1.7_Hz_ws_40  &  1.1159596684e-05
+acc_watch_x_freq_0.8_Hz_ws_40  &  1.11188969202e-05
+gyr_phone_x_freq_1.9_Hz_ws_40  &  1.05541154638e-05
+gyr_phone_z_freq_0.9_Hz_ws_40  &  1.04333317171e-05
+acc_phone_z_freq_1.8_Hz_ws_40  &  1.005930603e-05
+gyr_watch_x_freq_1.6_Hz_ws_40  &  9.93161829396e-06
+mag_watch_z_freq_1.7_Hz_ws_40  &  9.92434270225e-06
+acc_watch_x_max_freq  &  9.90273362802e-06
+acc_watch_z_freq_1.0_Hz_ws_40  &  9.78189783657e-06
+acc_watch_x_freq_1.3_Hz_ws_40  &  9.73153171744e-06
+gyr_phone_y_freq_0.8_Hz_ws_40  &  9.70263951366e-06
+mag_watch_y_freq_0.9_Hz_ws_40  &  9.67470547158e-06
+acc_phone_x_freq_0.1_Hz_ws_40  &  9.62871313883e-06
+gyr_phone_x  &  9.56515772142e-06
+mag_phone_z_freq_1.7_Hz_ws_40  &  9.53785873106e-06
+gyr_phone_z  &  9.53443638441e-06
+mag_phone_x_freq_1.7_Hz_ws_40  &  9.32791453887e-06
+acc_watch_x_freq_1.7_Hz_ws_40  &  9.21518008553e-06
+acc_watch_x_freq_weighted  &  9.06511535519e-06
+gyr_phone_x_freq_1.0_Hz_ws_40  &  8.98961621073e-06
+mag_phone_z_max_freq  &  8.949462825e-06
+acc_watch_z_freq_0.1_Hz_ws_40  &  8.89830843259e-06
+acc_watch_x_freq_1.8_Hz_ws_40  &  8.86471972668e-06
+acc_watch_y_freq_0.6_Hz_ws_40  &  8.48881502125e-06
+acc_phone_z_freq_2.0_Hz_ws_40  &  8.43924276084e-06
+mag_phone_z_freq_0.5_Hz_ws_40  &  8.4390750347e-06
+gyr_phone_y_freq_0.6_Hz_ws_40  &  8.42535881888e-06
+gyr_watch_x_freq_1.7_Hz_ws_40  &  8.34133691079e-06
+acc_watch_x_freq_0.3_Hz_ws_40  &  8.27086802555e-06
+acc_watch_y_freq_1.3_Hz_ws_40  &  8.21082665465e-06
+gyr_phone_y_freq_0.2_Hz_ws_40  &  8.1608879561e-06
+gyr_watch_x  &  8.14043526442e-06
+acc_watch_x_freq_0.9_Hz_ws_40  &  8.06808931523e-06
+mag_watch_y_freq_1.8_Hz_ws_40  &  7.77642303587e-06
+acc_watch_y_freq_0.2_Hz_ws_40  &  7.76943387809e-06
+acc_watch_z_freq_0.2_Hz_ws_40  &  7.75110438569e-06
+mag_watch_x_freq_2.0_Hz_ws_40  &  7.63390201212e-06
+mag_phone_z_freq_2.0_Hz_ws_40  &  7.59067034093e-06
+mag_phone_y_freq_0.9_Hz_ws_40  &  7.43354638216e-06
+acc_watch_y_freq_0.5_Hz_ws_40  &  7.38640961519e-06
+acc_watch_z_freq_1.6_Hz_ws_40  &  7.36360771967e-06
+gyr_watch_x_freq_2.0_Hz_ws_40  &  7.00294542108e-06
+mag_watch_z_freq_0.6_Hz_ws_40  &  6.89243985042e-06
+gyr_phone_x_freq_0.6_Hz_ws_40  &  6.87667335323e-06
+gyr_phone_z_freq_0.6_Hz_ws_40  &  6.79256569554e-06
+acc_phone_x_freq_2.0_Hz_ws_40  &  6.59794823819e-06
+acc_watch_z_freq_0.8_Hz_ws_40  &  6.51297796433e-06
+mag_phone_y_freq_0.6_Hz_ws_40  &  6.39144226597e-06
+labelWalking  &  6.3841403995e-06
+temp_pattern_labelWalking  &  6.20130616556e-06
+mag_watch_x_freq_1.7_Hz_ws_40  &  5.64257545751e-06
+gyr_watch_x_freq_0.1_Hz_ws_40  &  5.49705734365e-06
+gyr_watch_x_freq_1.8_Hz_ws_40  &  5.39128151882e-06
+mag_phone_z_freq_0.6_Hz_ws_40  &  4.69033985818e-06
+gyr_phone_x_freq_1.8_Hz_ws_40  &  4.66296829999e-06
+gyr_watch_z_freq_1.7_Hz_ws_40  &  4.02665911942e-06
+gyr_watch_z_freq_1.9_Hz_ws_40  &  3.9658490605e-06
+gyr_watch_z_freq_0.9_Hz_ws_40  &  3.75663066653e-06
+acc_watch_z_freq_1.9_Hz_ws_40  &  3.52202260449e-06
+temp_pattern_labelSitting(b)labelSitting  &  3.34556284859e-06
+mag_watch_y_freq_1.3_Hz_ws_40  &  3.15218343613e-06
+mag_watch_z_freq_0.2_Hz_ws_40  &  3.11693813618e-06
+mag_phone_x_freq_1.8_Hz_ws_40  &  2.99533464031e-06
+mag_watch_y_max_freq  &  5.61251788701e-07
+acc_watch_z_max_freq  &  5.2049042386e-07
+labelStanding  &  5.05512301971e-07
+temp_pattern_labelWalking(b)labelWalking  &  3.38180913172e-07
+temp_pattern_labelStanding  &  8.90232245369e-08
+temp_pattern_labelStanding(b)labelStanding  &  2.74160355314e-08
+labelSitting  &  0.0
+temp_pattern_labelStanding(b)labelWalking  &  0.0
+temp_pattern_labelWalking(b)labelStanding  &  0.0
+temp_pattern_labelOnTable  &  0.0
+labelRunning  &  0.0
+labelOnTable  &  0.0
+temp_pattern_labelDriving  &  0.0
+temp_pattern_labelWalking(b)labelDriving  &  0.0
+temp_pattern_labelRunning(b)labelRunning  &  0.0
+temp_pattern_labelOnTable(b)labelOnTable  &  0.0
+temp_pattern_labelRunning  &  0.0

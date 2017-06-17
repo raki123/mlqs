@@ -1,0 +1,4 @@
+crowdsignals_ch7_regression.py:41: FutureWarning: to_datetime is deprecated. Use pd.to_datetime(...)
+  dataset.index = dataset.index.to_datetime()
+/Users/mcjvasseur/anaconda/envs/MLQS27/lib/python2.7/site-packages/scipy/stats/stats.py:3029: RuntimeWarning: invalid value encountered in double_scalars
+  r = r_num / r_den

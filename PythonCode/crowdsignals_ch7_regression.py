@@ -76,10 +76,12 @@ fs = FeatureSelectionRegression()
 
 # First, let us consider the Pearson correlations and see whether we can select based on them.
 features, correlations = fs.pearson_selection(10, train_X[features_after_chapter_5], train_y)
+print "best correlations"
 util.print_pearson_correlations(correlations)
 
 # We select the 10 features with the highest correlation.
 
+'''
 selected_features = ['temp_pattern_labelOnTable','labelOnTable','temp_pattern_labelOnTable(b)labelOnTable','pca_2_temp_mean_ws_120',
                      'pca_1_temp_mean_ws_120','acc_watch_y_temp_mean_ws_120','pca_2','acc_phone_z_temp_mean_ws_120',
                      'gyr_watch_y_pse','gyr_watch_x_pse']
@@ -185,7 +187,8 @@ for i in range(0, len(possible_feature_sets)):
 print "Segmentation fault?"
 print scores_over_all_algs
 print feature_names
-DataViz.plot_performances_regression(['NN', 'RF', 'SVM', 'KNN', 'DT'], feature_names, scores_over_all_algs)
+#DataViz.plot_performances_regression(['NN', 'RF', 'SVM', 'KNN', 'DT'], feature_names, scores_over_all_algs)
 print "We dont see this"
 regr_train_y, regr_test_y = learner.random_forest(train_X[features_after_chapter_5], train_y, test_X[features_after_chapter_5], gridsearch=True, print_model_details=True)
 DataViz.plot_numerical_prediction_versus_real(train_X.index, train_y, regr_train_y, test_X.index, test_y, regr_test_y, 'heart rate')
+'''
