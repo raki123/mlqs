@@ -12,6 +12,8 @@ import math
 import sys
 import dateutil
 import random
+import string
+
 class VisualizeDataset:
 
     point_displays = ['+', 'x'] #'*', 'd', 'o', 's', '<', '>']

@@ -47,7 +47,7 @@ dataset.index = dataset.index.to_datetime()
 dataset1 = pd.read_csv('./intermediate_datafiles/smallncomparedtop.csv', index_col = 0)
 dataset1.index = dataset1.index.to_datetime()
 
-for dataset in [dataset, dataset1]:
+for dataset in [dataset1]:
 
 	# Let us consider our first task, namely the prediction of the label. We consider this as a non-temporal task.
 
@@ -128,5 +128,6 @@ for dataset in [dataset, dataset1]:
 	plot.ylim([0.95, 1.01])
 	plot.legend(['training', 'test'], loc=4)
 	plot.hold(False)
-	plot.savefig(str(len(dataset))+'smallnStory.png')
-	plot.close()
+	#plot.savefig(str(len(dataset))+'smallnStory.png')
+	plot.show()
+	#plot.close()
