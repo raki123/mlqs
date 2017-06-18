@@ -78,7 +78,7 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 # First, let us consider the performance over a selection of features:
 
 fs = FeatureSelectionClassification()
-
+'''
 features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
 print ordered_scores
 print ordered_features
@@ -89,7 +89,7 @@ plot.plot(range(1, 51), ordered_scores)
 plot.xlabel('number of features')
 plot.ylabel('accuracy')
 plot.show()
-
+'''
 # Based on the plot we select the top 10 features.
 
 selected_features = ['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'pca_4_temp_mean_ws_120']
@@ -134,7 +134,8 @@ plot.ylim([0.95, 1.01])
 plot.legend(['training', 'test'], loc=4)
 plot.hold(False)
 
-plot.show()
+plot.savefig('ownsetclassificationChapter7.png')
+#show()
 
 # Second, let us consider the influence of certain parameter settings (very related to the regulariztion) and study the impact on performance.
 
@@ -156,7 +157,8 @@ plot.ylabel('accuracy')
 plot.legend(['training', 'test'], loc=1)
 plot.hold(False)
 
-plot.show()
+plot.savefig('ownsetclassificationchapter7leafsettings.png')
+#show()
 
 
 # So yes, it is important :) Therefore we perform grid searches over the most important parameters, and do so by means
@@ -227,7 +229,7 @@ for i in range(0, len(possible_feature_sets)):
                                                                                                 (performance_tr_nb, performance_te_nb)])
     scores_over_all_algs.append(scores_with_sd)
 
-DataViz.plot_performances_classification(['NN', 'RF', 'SVM', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
+DataViz.plot_savefigperformances_classification(['NN', 'RF', 'SVM', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
 
 # And we study two promising ones in more detail. First let us consider the decision tree which works best with the selected
 # features.

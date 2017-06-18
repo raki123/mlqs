@@ -11,7 +11,7 @@ from scipy.optimize import curve_fit
 import math
 import sys
 import dateutil
-
+import random
 class VisualizeDataset:
 
     point_displays = ['+', 'x'] #'*', 'd', 'o', 's', '<', '>']
@@ -359,8 +359,35 @@ class VisualizeDataset:
         plot.savefig('perf_overview.png')
         plot.show()
 
+    def plot_savefigperformances(self, algs, feature_subset_names, scores_over_all_algs, ylim, std_mult, y_name):
+
+        plot.hold(True)
+        width = float(1)/(len(feature_subset_names)+1)
+        ind = np.arange(len(algs))
+        for i in range(0, len(feature_subset_names)):
+            means = []
+            std = []
+            for j in range(0, len(algs)):
+                means.append(scores_over_all_algs[i][j][2])
+                std.append(std_mult * scores_over_all_algs[i][j][3])
+            plot.errorbar(ind + i * width, means, yerr=std, fmt=self.colors[i%len(self.colors)] + 'o', markersize='3')
+        plot.ylabel(y_name)
+        plot.xticks(ind+(float(len(feature_subset_names))/2)*width, algs)
+        plot.legend(feature_subset_names, loc=4, numpoints=1)
+        if not ylim is None:
+            plot.ylim(ylim)
+        # plot.tight_layout()
+        filename = ''.join(random.choice(string.ascii_uppercase + string.digits) for _ in range(20)).join('.png')
+	print "plot should be in:", filename
+	plot.savefig(filename)
+	#plot.savefig('perf_overview.png')
+        #plot.show()
+
     def plot_performances_classification(self, algs, feature_subset_names, scores_over_all_algs):
         self.plot_performances(algs, feature_subset_names, scores_over_all_algs, [0, 1.0], 2, 'Accuracy')
 
     def plot_performances_regression(self, algs, feature_subset_names, scores_over_all_algs):
         self.plot_performances(algs, feature_subset_names, scores_over_all_algs, None, 1, 'Mean Squared Error')
+
+    def plot_savefigperformances_classification(self, algs, feature_subset_names, scores_over_all_algs):
+        self.plot_savefigperformances(algs, feature_subset_names, scores_over_all_algs, [0.70, 1.0], 2, 'Accuracy')
