@@ -299,7 +299,7 @@ class VisualizeDataset:
 
         plot.ylabel(label)
         plot.xlabel('time')
-        plot.ylim([40,220])
+        #plot.ylim([40,220])
         plot.annotate('', xy=(train_time[0],y_coord_labels), xycoords='data', xytext=(train_time[-1], y_coord_labels), textcoords='data', arrowprops={'arrowstyle': '<->'})
         plot.annotate('training set', xy=(train_time[int(float(len(train_time))/2)], y_coord_labels*1.02), color='blue', xycoords='data', ha='center')
         plot.annotate('', xy=(test_time[0], y_coord_labels), xycoords='data', xytext=(test_time[-1], y_coord_labels), textcoords='data', arrowprops={'arrowstyle': '<->'})
@@ -360,7 +360,7 @@ class VisualizeDataset:
         plot.show()
 
     def plot_performances_classification(self, algs, feature_subset_names, scores_over_all_algs):
-        self.plot_performances(algs, feature_subset_names, scores_over_all_algs, [0.70, 1.0], 2, 'Accuracy')
+        self.plot_performances(algs, feature_subset_names, scores_over_all_algs, [0, 1.0], 2, 'Accuracy')
 
     def plot_performances_regression(self, algs, feature_subset_names, scores_over_all_algs):
         self.plot_performances(algs, feature_subset_names, scores_over_all_algs, None, 1, 'Mean Squared Error')
