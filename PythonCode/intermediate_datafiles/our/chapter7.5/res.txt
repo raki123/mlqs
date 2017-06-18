@@ -1,2 +1,3 @@
-['gyr_phone_y', 'mag_phone_z', 'acc_phone_y', 'acc_phone_x', 'pca_3', 'light_phone_lux', 'gyr_phone_z', 'pca_2', 'acc_phone_z', 'pca_1', 'mag_phone_x', 'mag_phone_y', 'pca_4', 'gyr_phone_x', 'gyr_phone_x']
-['acc_phone_x', 'acc_phone_y', 'acc_phone_z', 'light_phone_lux', 'pca_1', 'pca_2', 'pca_3', 'pca_4', 'mag_phone_z', 'mag_phone_x', 'mag_phone_y', 'gyr_phone_y', 'gyr_phone_x', 'gyr_phone_z']
+['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'acc_phone_x_temp_mean_ws_120', 'gyr_phone_z_temp_std_ws_120', 'pca_4_temp_std_ws_120', 'pca_2', 'acc_phone_y_temp_std_ws_120', 'gyr_phone_y_temp_std_ws_120', 'pca_4', 'light_phone_lux', 'light_phone_lux_temp_std_ws_120', 'pca_2_temp_mean_ws_120', 'mag_phone_z_temp_std_ws_120', 'gyr_phone_z_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120']
+
+['mag_phone_z_temp_mean_ws_120', 'acc_phone_z', 'gyr_phone_z', 'gyr_phone_x_temp_mean_ws_120', 'acc_phone_z_temp_std_ws_120', 'light_phone_lux_temp_mean_ws_120', 'mag_phone_x_temp_std_ws_120', 'acc_phone_x_temp_mean_ws_120', 'pca_3_temp_std_ws_120', 'pca_1_temp_mean_ws_120', 'acc_phone_x_temp_std_ws_120', 'mag_phone_z', 'acc_phone_z_temp_mean_ws_120', 'mag_phone_x', 'mag_phone_y']

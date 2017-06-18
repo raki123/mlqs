@@ -43,7 +43,7 @@ if not os.path.exists(export_tree_path):
     os.makedirs(export_tree_path)
 
 dataset.index = dataset.index.to_datetime()
-
+dataset = dataset[1:260]
 # Let us consider our first task, namely the prediction of the label. We consider this as a non-temporal task.
 
 # We create a single column with the categorical attribute representing our class. Furthermore, we use 70% of our data
@@ -78,7 +78,7 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 # First, let us consider the performance over a selection of features:
 
 fs = FeatureSelectionClassification()
-'''
+
 features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
 print ordered_scores
 print ordered_features
@@ -89,7 +89,7 @@ plot.plot(range(1, 51), ordered_scores)
 plot.xlabel('number of features')
 plot.ylabel('accuracy')
 plot.show()
-'''
+
 # Based on the plot we select the top 10 features.
 
 selected_features = ['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'pca_4_temp_mean_ws_120']
@@ -102,7 +102,7 @@ selected_features = ['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y
 
 learner = ClassificationAlgorithms()
 eval = ClassificationEvaluation()
-
+'''
 reg_parameters = [0.0001, 0.001, 0.01, 0.1, 1, 10]
 performance_training = []
 performance_test = []
@@ -134,8 +134,7 @@ plot.ylim([0.95, 1.01])
 plot.legend(['training', 'test'], loc=4)
 plot.hold(False)
 
-plot.savefig('ownsetclassificationChapter7.png')
-#show()
+plot.show()
 
 # Second, let us consider the influence of certain parameter settings (very related to the regulariztion) and study the impact on performance.
 
@@ -157,9 +156,8 @@ plot.ylabel('accuracy')
 plot.legend(['training', 'test'], loc=1)
 plot.hold(False)
 
-plot.savefig('ownsetclassificationchapter7leafsettings.png')
-#show()
-
+plot.show()
+'''
 
 # So yes, it is important :) Therefore we perform grid searches over the most important parameters, and do so by means
 # of cross validation upon the training set.
@@ -229,7 +227,7 @@ for i in range(0, len(possible_feature_sets)):
                                                                                                 (performance_tr_nb, performance_te_nb)])
     scores_over_all_algs.append(scores_with_sd)
 
-DataViz.plot_savefigperformances_classification(['NN', 'RF', 'SVM', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
+DataViz.plot_performances_classification(['NN', 'RF', 'SVM', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
 
 # And we study two promising ones in more detail. First let us consider the decision tree which works best with the selected
 # features.

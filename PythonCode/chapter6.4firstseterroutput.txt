@@ -1,0 +1,4 @@
+chapter6.4.py:45: FutureWarning: to_datetime is deprecated. Use pd.to_datetime(...)
+  dataset.index = dataset.index.to_datetime()
+chapter6.4.py:48: FutureWarning: to_datetime is deprecated. Use pd.to_datetime(...)
+  dataset1.index = dataset1.index.to_datetime()

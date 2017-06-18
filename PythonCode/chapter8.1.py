@@ -148,7 +148,7 @@ repeats = 5
 washout_time = 10
 
 scores_over_all_algs = []
-
+'''
 for i in range(len(feature_names)):
 
     print feature_names[i]
@@ -223,8 +223,9 @@ for i in range(len(feature_names)):
     scores_over_all_algs.append(scores_with_sd)
 
 DataViz.plot_performances_regression(['Reservoir', 'RNN', 'Time series'], feature_names, scores_over_all_algs)
-
+'''
 regr_train_y, regr_test_y = learner.reservoir_computing(train_X[features_after_chapter_5], train_y, test_X[features_after_chapter_5], test_y, gridsearch=True)
+print regr_train_y, regr_test_y
 DataViz.plot_numerical_prediction_versus_real(train_X.index, train_y, regr_train_y['acc_phone_x'], test_X.index, test_y, regr_test_y['acc_phone_x'], 'acc_phone_x')
 regr_train_y, regr_test_y = learner.recurrent_neural_network(train_X[basic_features], train_y, test_X[basic_features], test_y, gridsearch=True)
 DataViz.plot_numerical_prediction_versus_real(train_X.index, train_y, regr_train_y['acc_phone_x'], test_X.index, test_y, regr_test_y['acc_phone_x'], 'acc_phone_x')

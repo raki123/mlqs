@@ -100,7 +100,7 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 
 
 # First, let us consider the performance over a selection of features:
-
+'''
 fs = FeatureSelectionClassification()
 
 features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
@@ -113,7 +113,7 @@ plot.ylabel('accuracy')
 plot.show()
 
 # Based on the plot we select the top 10 features.
-
+'''
 selected_features = ['acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
                      'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
                      'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
@@ -122,7 +122,7 @@ selected_features = ['acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp
 
 learner = ClassificationAlgorithms()
 eval = ClassificationEvaluation()
-
+'''
 reg_parameters = [0.0001, 0.001, 0.01, 0.1, 1, 10]
 performance_training = []
 performance_test = []
@@ -181,10 +181,10 @@ plot.show()
 
 # So yes, it is important :) Therefore we perform grid searches over the most important parameters, and do so by means
 # of cross validation upon the training set.
+'''
 
-
-possible_feature_sets = [basic_features, features_after_chapter_3, features_after_chapter_4, features_after_chapter_5, selected_features]
-feature_names = ['initial set', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Selected features']
+possible_feature_sets = [selected_features]
+feature_names = ['Selected features']
 repeats = 5
 
 scores_over_all_algs = []
@@ -203,6 +203,7 @@ for i in range(0, len(possible_feature_sets)):
     performance_te_svm = 0
 
     for repeat in range(0, repeats):
+        print repeat
         class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.feedforward_neural_network(selected_train_X, train_y, selected_test_X, gridsearch=True)
         performance_tr_nn += eval.accuracy(train_y, class_train_y)
         performance_te_nn += eval.accuracy(test_y, class_test_y)

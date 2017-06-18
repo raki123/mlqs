@@ -30,11 +30,11 @@ DataViz = VisualizeDataset()
 
 # Read the result from the previous chapter, and make sure the index is of the type datetime.
 
-dataset_path = './intermediate_datafiles-own/'
-export_tree_path = 'Example_graphs-own/Chapter7/'
+dataset_path = './intermediate_datafiles/'
+export_tree_path = 'Example_graphs/Chapter7/'
 
 try:
-    dataset = pd.read_csv(dataset_path + 'chapter5_result-own.csv', index_col=0)
+    dataset = pd.read_csv(dataset_path + 'chapter5_result.csv', index_col=0)
 except IOError as e:
     print('File not found, try to run previous crowdsignals scripts first!')
     raise e
@@ -43,6 +43,7 @@ if not os.path.exists(export_tree_path):
     os.makedirs(export_tree_path)
 
 dataset.index = dataset.index.to_datetime()
+dataset = dataset.dropna()
 
 # Let us consider our first task, namely the prediction of the label. We consider this as a non-temporal task.
 
@@ -52,16 +53,39 @@ dataset.index = dataset.index.to_datetime()
 
 prepare = PrepareDatasetForLearning()
 
-train_X, test_X, train_y, test_y = prepare.split_single_dataset_classification(dataset, ['label'], 'like', 0.7, filter=True, temporal=False)
+exact_labels = ['labelOnTable', 'labelSitting', 'labelWashingHands', 'labelWalking', 'labelStanding', 'labelDriving', 'labelEating', 'labelRunning']
+sum_values = dataset[exact_labels].sum(axis=1)
+# Create a new 'class' column and set the value to the default class.
+dataset['class'] = 'undefined'
+for i in range(0, len(dataset.index)):
+    # If we have exactly one true class column, we can assign that value,
+    # otherwise we keep the default class.
+    first = True
+    for label in exact_labels:
+        if dataset.ix[i, label] == 1:
+            if first:
+                dataset.ix[i, 'class'] = label
+            else:
+                new_row = copy.deepcopy(dataset.ix[i])
+                new_row['class'] = label
+                dataset.loc[-1] = new_row
+                dataset.index += 1
+                print new_row
+
+
+train_X, test_X, train_y, test_y = prepare.split_single_dataset_classification(dataset, ['class'], 'exact', 0.7, filter=False, temporal=False)
 #train_X, test_X, train_y, test_y = prepare.split_single_dataset_classification(dataset, ['label'], 'like', 0.01, filter=True, temporal=False)
 
 print 'Training set length is: ', len(train_X.index)
+print 'Training set length is: ', len(train_y.index)
 print 'Test set length is: ', len(test_X.index)
+print 'Test set length is: ', len(test_y.index)
 
 # Select subsets of the features that we will consider:
 
-basic_features = ['acc_phone_x','acc_phone_y','acc_phone_z','gyr_phone_x','gyr_phone_y','gyr_phone_z','light_phone_lux','mag_phone_x','mag_phone_y','mag_phone_z']
-pca_features = ['pca_1','pca_2','pca_3','pca_4']
+basic_features = ['acc_phone_x','acc_phone_y','acc_phone_z','acc_watch_x','acc_watch_y','acc_watch_z','gyr_phone_x','gyr_phone_y','gyr_phone_z','gyr_watch_x','gyr_watch_y','gyr_watch_z',
+                  'hr_watch_rate', 'light_phone_lux','mag_phone_x','mag_phone_y','mag_phone_z','mag_watch_x','mag_watch_y','mag_watch_z','press_phone_pressure']
+pca_features = ['pca_1','pca_2','pca_3','pca_4','pca_5','pca_6','pca_7']
 time_features = [name for name in dataset.columns if '_temp_' in name]
 freq_features = [name for name in dataset.columns if (('_freq' in name) or ('_pse' in name))]
 print '#basic features: ', len(basic_features)
@@ -76,33 +100,29 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 
 
 # First, let us consider the performance over a selection of features:
-
-fs = FeatureSelectionClassification()
 '''
+fs = FeatureSelectionClassification()
+
 features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
 print ordered_scores
 print ordered_features
-
-print "plotting"
 
 plot.plot(range(1, 51), ordered_scores)
 plot.xlabel('number of features')
 plot.ylabel('accuracy')
 plot.show()
-'''
-# Based on the plot we select the top 10 features.
 
-selected_features = ['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'pca_4_temp_mean_ws_120']
-#'['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'pca_4_temp_mean_ws_120', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'acc_phone_y_temp_mean_ws_120', 'gyr_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.2_Hz_ws_40', 'mag_phone_z_pse', 'gyr_phone_x_freq_1.7_Hz_ws_40', 'mag_phone_y_freq_0.1_Hz_ws_40', 'acc_phone_z_freq_0.6_Hz_ws_40', 'gyr_phone_z_freq_1.0_Hz_ws_40', 'acc_phone_x_freq_1.9_Hz_ws_40', 'gyr_phone_x_freq_0.5_Hz_ws_40', 'gyr_phone_y_freq_1.0_Hz_ws_40', 'acc_phone_y_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.9_Hz_ws_40', 'mag_phone_y_freq_1.1_Hz_ws_40', 'gyr_phone_x_freq_1.5_Hz_ws_40', 'acc_phone_x_freq_1.7_Hz_ws_40', 'gyr_phone_x_max_freq', 'mag_phone_z_freq_1.0_Hz_ws_40', 'gyr_phone_z_freq_0.5_Hz_ws_40', 'gyr_phone_z_freq_1.9_Hz_ws_40', 'mag_phone_z_freq_0.3_Hz_ws_40', 'gyr_phone_x_freq_0.9_Hz_ws_40', 'acc_phone_y_freq_0.5_Hz_ws_40', 'acc_phone_x_freq_0.3_Hz_ws_40', 'mag_phone_y_freq_0.2_Hz_ws_40', 'gyr_phone_x_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.8_Hz_ws_40', 'gyr_phone_z_temp_mean_ws_120', 'gyr_phone_z_temp_std_ws_120', 'gyr_phone_x_temp_std_ws_120', 'acc_phone_y_freq_1.4_Hz_ws_40', 'gyr_phone_y_max_freq', 'gyr_phone_x_freq_weighted', 'mag_phone_y_temp_mean_ws_120', 'gyr_phone_z_pse', 'acc_phone_y_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.2_Hz_ws_40', 'gyr_phone_z_freq_0.4_Hz_ws_40', 'acc_phone_y_freq_0.9_Hz_ws_40', 'gyr_phone_y_freq_0.0_Hz_ws_40', 'acc_phone_y_freq_weighted', 'mag_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_z_freq_1.6_Hz_ws_40']
-#'acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
-#                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
-#                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
+# Based on the plot we select the top 10 features.
+'''
+selected_features = ['acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
+                     'mag_watch_y_pse', 'mag_phone_z_max_freq', 'gyr_watch_y_freq_weighted', 'gyr_phone_y_freq_1.0_Hz_ws_40',
+                     'acc_phone_x_freq_1.9_Hz_ws_40', 'mag_watch_z_freq_0.9_Hz_ws_40', 'acc_watch_y_freq_0.5_Hz_ws_40']
 
 # Let us first study the impact of regularization and model complexity: does regularization prevent overfitting?
 
 learner = ClassificationAlgorithms()
 eval = ClassificationEvaluation()
-
+'''
 reg_parameters = [0.0001, 0.001, 0.01, 0.1, 1, 10]
 performance_training = []
 performance_test = []
@@ -134,8 +154,7 @@ plot.ylim([0.95, 1.01])
 plot.legend(['training', 'test'], loc=4)
 plot.hold(False)
 
-plot.savefig('ownsetclassificationChapter7.png')
-#show()
+plot.show()
 
 # Second, let us consider the influence of certain parameter settings (very related to the regulariztion) and study the impact on performance.
 
@@ -157,13 +176,11 @@ plot.ylabel('accuracy')
 plot.legend(['training', 'test'], loc=1)
 plot.hold(False)
 
-plot.savefig('ownsetclassificationchapter7leafsettings.png')
-#show()
-
+plot.show()
+'''
 
 # So yes, it is important :) Therefore we perform grid searches over the most important parameters, and do so by means
 # of cross validation upon the training set.
-
 
 possible_feature_sets = [basic_features, features_after_chapter_3, features_after_chapter_4, features_after_chapter_5, selected_features]
 feature_names = ['initial set', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Selected features']
@@ -179,12 +196,13 @@ for i in range(0, len(possible_feature_sets)):
 
     performance_tr_nn = 0
     performance_tr_rf = 0
-    performance_tr_svm = 0
+    #performance_tr_svm = 0
     performance_te_nn = 0
     performance_te_rf = 0
-    performance_te_svm = 0
+    #performance_te_svm = 0
 
     for repeat in range(0, repeats):
+        print repeat
         class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.feedforward_neural_network(selected_train_X, train_y, selected_test_X, gridsearch=True)
         performance_tr_nn += eval.accuracy(train_y, class_train_y)
         performance_te_nn += eval.accuracy(test_y, class_test_y)
@@ -193,17 +211,17 @@ for i in range(0, len(possible_feature_sets)):
         performance_tr_rf += eval.accuracy(train_y, class_train_y)
         performance_te_rf += eval.accuracy(test_y, class_test_y)
 
-        class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.support_vector_machine_with_kernel(selected_train_X, train_y, selected_test_X, gridsearch=True)
-        performance_tr_svm += eval.accuracy(train_y, class_train_y)
-        performance_te_svm += eval.accuracy(test_y, class_test_y)
+       # class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.support_vector_machine_with_kernel(selected_train_X, train_y, selected_test_X, gridsearch=True)
+       # performance_tr_svm += eval.accuracy(train_y, class_train_y)
+       # performance_te_svm += eval.accuracy(test_y, class_test_y)
 
 
     overall_performance_tr_nn = performance_tr_nn/repeats
     overall_performance_te_nn = performance_te_nn/repeats
     overall_performance_tr_rf = performance_tr_rf/repeats
     overall_performance_te_rf = performance_te_rf/repeats
-    overall_performance_tr_svm = performance_tr_svm/repeats
-    overall_performance_te_svm = performance_te_svm/repeats
+    #overall_performance_tr_svm = performance_tr_svm/repeats
+    #overall_performance_te_svm = performance_te_svm/repeats
 
     # And we run our deterministic classifiers:
 
@@ -223,24 +241,18 @@ for i in range(0, len(possible_feature_sets)):
     scores_with_sd = util.print_table_row_performances(feature_names[i], len(selected_train_X.index), len(selected_test_X.index), [
                                                                                                 (overall_performance_tr_nn, overall_performance_te_nn),
                                                                                                 (overall_performance_tr_rf, overall_performance_te_rf),
-                                                                                                (overall_performance_tr_svm, overall_performance_te_svm),
                                                                                                 (performance_tr_knn, performance_te_knn),
                                                                                                 (performance_tr_dt, performance_te_dt),
                                                                                                 (performance_tr_nb, performance_te_nb)])
     scores_over_all_algs.append(scores_with_sd)
 
-DataViz.plot_savefigperformances_classification(['NN', 'RF', 'SVM', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
-
+DataViz.plot_performances_classification(['NN', 'RF', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
 # And we study two promising ones in more detail. First let us consider the decision tree which works best with the selected
 # features.
 #
-class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.decision_tree(train_X[selected_features], train_y, test_X[selected_features],
-                                                                                           gridsearch=True,
-                                                                                           print_model_details=True, export_tree_path=export_tree_path)
+#class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.decision_tree(train_X[selected_features], train_y, test_X[selected_features],
+#                                                                                           gridsearch=True,
+#                                                                                           print_model_details=True, export_tree_path=export_tree_path)
 
-class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.random_forest(train_X[selected_features], train_y, test_X[selected_features],
-                                                                                           gridsearch=True, print_model_details=True)
-
-test_cm = eval.confusion_matrix(test_y, class_test_y, class_train_prob_y.columns)
-
-DataViz.plot_confusion_matrix(test_cm, class_train_prob_y.columns, normalize=False)
+#class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.random_forest(train_X[selected_features], train_y, test_X[selected_features],
+#                                                                                           gridsearch=True, print_model_details=True)
