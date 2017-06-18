@@ -99,7 +99,7 @@ for dataset in [dataset, dataset1]:
 
 	test_cm = eval.confusion_matrix(test_y, class_test_y, class_train_prob_y.columns)
 
-	DataViz.plot_confusion_matrix(test_cm, class_train_prob_y.columns, normalize=False)
+	#DataViz.plot_confusion_matrix(test_cm, class_train_prob_y.columns, normalize=False)
 
 	reg_parameters = [0.0001, 0.001, 0.01, 0.1, 1, 10]
 	performance_training = []
@@ -128,4 +128,5 @@ for dataset in [dataset, dataset1]:
 	plot.ylim([0.95, 1.01])
 	plot.legend(['training', 'test'], loc=4)
 	plot.hold(False)
-	plot.show()
+	plot.savefig(str(len(dataset))+'smallnStory.png')
+	plot.close()
