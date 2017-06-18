@@ -177,14 +177,13 @@ plot.legend(['training', 'test'], loc=1)
 plot.hold(False)
 
 plot.show()
-
+'''
 
 # So yes, it is important :) Therefore we perform grid searches over the most important parameters, and do so by means
 # of cross validation upon the training set.
-'''
 
-possible_feature_sets = [selected_features]
-feature_names = ['Selected features']
+possible_feature_sets = [basic_features, features_after_chapter_3, features_after_chapter_4, features_after_chapter_5, selected_features]
+feature_names = ['initial set', 'Chapter 3', 'Chapter 4', 'Chapter 5', 'Selected features']
 repeats = 5
 
 scores_over_all_algs = []
@@ -197,10 +196,10 @@ for i in range(0, len(possible_feature_sets)):
 
     performance_tr_nn = 0
     performance_tr_rf = 0
-    performance_tr_svm = 0
+    #performance_tr_svm = 0
     performance_te_nn = 0
     performance_te_rf = 0
-    performance_te_svm = 0
+    #performance_te_svm = 0
 
     for repeat in range(0, repeats):
         print repeat
@@ -212,17 +211,17 @@ for i in range(0, len(possible_feature_sets)):
         performance_tr_rf += eval.accuracy(train_y, class_train_y)
         performance_te_rf += eval.accuracy(test_y, class_test_y)
 
-        class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.support_vector_machine_with_kernel(selected_train_X, train_y, selected_test_X, gridsearch=True)
-        performance_tr_svm += eval.accuracy(train_y, class_train_y)
-        performance_te_svm += eval.accuracy(test_y, class_test_y)
+       # class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.support_vector_machine_with_kernel(selected_train_X, train_y, selected_test_X, gridsearch=True)
+       # performance_tr_svm += eval.accuracy(train_y, class_train_y)
+       # performance_te_svm += eval.accuracy(test_y, class_test_y)
 
 
     overall_performance_tr_nn = performance_tr_nn/repeats
     overall_performance_te_nn = performance_te_nn/repeats
     overall_performance_tr_rf = performance_tr_rf/repeats
     overall_performance_te_rf = performance_te_rf/repeats
-    overall_performance_tr_svm = performance_tr_svm/repeats
-    overall_performance_te_svm = performance_te_svm/repeats
+    #overall_performance_tr_svm = performance_tr_svm/repeats
+    #overall_performance_te_svm = performance_te_svm/repeats
 
     # And we run our deterministic classifiers:
 
@@ -242,24 +241,18 @@ for i in range(0, len(possible_feature_sets)):
     scores_with_sd = util.print_table_row_performances(feature_names[i], len(selected_train_X.index), len(selected_test_X.index), [
                                                                                                 (overall_performance_tr_nn, overall_performance_te_nn),
                                                                                                 (overall_performance_tr_rf, overall_performance_te_rf),
-                                                                                                (overall_performance_tr_svm, overall_performance_te_svm),
                                                                                                 (performance_tr_knn, performance_te_knn),
                                                                                                 (performance_tr_dt, performance_te_dt),
                                                                                                 (performance_tr_nb, performance_te_nb)])
     scores_over_all_algs.append(scores_with_sd)
 
-DataViz.plot_performances_classification(['NN', 'RF', 'SVM', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
-
+DataViz.plot_performances_classification(['NN', 'RF', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
 # And we study two promising ones in more detail. First let us consider the decision tree which works best with the selected
 # features.
 #
-class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.decision_tree(train_X[selected_features], train_y, test_X[selected_features],
-                                                                                           gridsearch=True,
-                                                                                           print_model_details=True, export_tree_path=export_tree_path)
+#class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.decision_tree(train_X[selected_features], train_y, test_X[selected_features],
+#                                                                                           gridsearch=True,
+#                                                                                           print_model_details=True, export_tree_path=export_tree_path)
 
-class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.random_forest(train_X[selected_features], train_y, test_X[selected_features],
-                                                                                           gridsearch=True, print_model_details=True)
-
-test_cm = eval.confusion_matrix(test_y, class_test_y, class_train_prob_y.columns)
-
-DataViz.plot_confusion_matrix(test_cm, class_train_prob_y.columns, normalize=False)
+#class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.random_forest(train_X[selected_features], train_y, test_X[selected_features],
+#                                                                                           gridsearch=True, print_model_details=True)
