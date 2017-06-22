@@ -44,7 +44,6 @@ if not os.path.exists(export_tree_path):
 
 dataset.index = dataset.index.to_datetime()
 dataset = dataset.dropna()
-
 # Let us consider our first task, namely the prediction of the label. We consider this as a non-temporal task.
 
 # We create a single column with the categorical attribute representing our class. Furthermore, we use 70% of our data
@@ -211,9 +210,9 @@ for i in range(0, len(possible_feature_sets)):
         performance_tr_rf += eval.accuracy(train_y, class_train_y)
         performance_te_rf += eval.accuracy(test_y, class_test_y)
 
-       # class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.support_vector_machine_with_kernel(selected_train_X, train_y, selected_test_X, gridsearch=True)
-       # performance_tr_svm += eval.accuracy(train_y, class_train_y)
-       # performance_te_svm += eval.accuracy(test_y, class_test_y)
+        #class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.support_vector_machine_with_kernel(selected_train_X, train_y, selected_test_X, gridsearch=True)
+        #performance_tr_svm += eval.accuracy(train_y, class_train_y)
+        #performance_te_svm += eval.accuracy(test_y, class_test_y)
 
 
     overall_performance_tr_nn = performance_tr_nn/repeats
@@ -238,6 +237,7 @@ for i in range(0, len(possible_feature_sets)):
     performance_tr_nb = eval.accuracy(train_y, class_train_y)
     performance_te_nb = eval.accuracy(test_y, class_test_y)
 
+
     scores_with_sd = util.print_table_row_performances(feature_names[i], len(selected_train_X.index), len(selected_test_X.index), [
                                                                                                 (overall_performance_tr_nn, overall_performance_te_nn),
                                                                                                 (overall_performance_tr_rf, overall_performance_te_rf),
@@ -247,6 +247,7 @@ for i in range(0, len(possible_feature_sets)):
     scores_over_all_algs.append(scores_with_sd)
 
 DataViz.plot_performances_classification(['NN', 'RF', 'KNN', 'DT', 'NB'], feature_names, scores_over_all_algs)
+
 # And we study two promising ones in more detail. First let us consider the decision tree which works best with the selected
 # features.
 #

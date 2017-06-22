@@ -43,7 +43,6 @@ if not os.path.exists(export_tree_path):
     os.makedirs(export_tree_path)
 
 dataset.index = dataset.index.to_datetime()
-dataset = dataset[1:260]
 # Let us consider our first task, namely the prediction of the label. We consider this as a non-temporal task.
 
 # We create a single column with the categorical attribute representing our class. Furthermore, we use 70% of our data
@@ -52,8 +51,10 @@ dataset = dataset[1:260]
 
 prepare = PrepareDatasetForLearning()
 
-train_X, test_X, train_y, test_y = prepare.split_single_dataset_classification(dataset, ['label'], 'like', 0.7, filter=True, temporal=False)
+train_X, test_X, train_y, test_y = prepare.split_single_dataset_classification(dataset, ['label'], 'like', 0.1, filter=True, temporal=False)
 #train_X, test_X, train_y, test_y = prepare.split_single_dataset_classification(dataset, ['label'], 'like', 0.01, filter=True, temporal=False)
+
+print train_y
 
 print 'Training set length is: ', len(train_X.index)
 print 'Test set length is: ', len(test_X.index)
@@ -76,7 +77,7 @@ features_after_chapter_5 = list(set().union(basic_features, pca_features, time_f
 
 
 # First, let us consider the performance over a selection of features:
-
+'''
 fs = FeatureSelectionClassification()
 
 features, ordered_features, ordered_scores = fs.forward_selection(50, train_X[features_after_chapter_5], train_y)
@@ -91,7 +92,7 @@ plot.ylabel('accuracy')
 plot.show()
 
 # Based on the plot we select the top 10 features.
-
+'''
 selected_features = ['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'pca_4_temp_mean_ws_120']
 #'['gyr_phone_y', 'mag_phone_z_temp_mean_ws_120', 'mag_phone_y_freq_0.0_Hz_ws_40', 'pca_4_temp_mean_ws_120', 'gyr_phone_y_freq_1.1_Hz_ws_40', 'acc_phone_y_temp_mean_ws_120', 'gyr_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_0.6_Hz_ws_40', 'acc_phone_x_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.2_Hz_ws_40', 'mag_phone_z_pse', 'gyr_phone_x_freq_1.7_Hz_ws_40', 'mag_phone_y_freq_0.1_Hz_ws_40', 'acc_phone_z_freq_0.6_Hz_ws_40', 'gyr_phone_z_freq_1.0_Hz_ws_40', 'acc_phone_x_freq_1.9_Hz_ws_40', 'gyr_phone_x_freq_0.5_Hz_ws_40', 'gyr_phone_y_freq_1.0_Hz_ws_40', 'acc_phone_y_freq_1.8_Hz_ws_40', 'acc_phone_z_freq_0.9_Hz_ws_40', 'mag_phone_y_freq_1.1_Hz_ws_40', 'gyr_phone_x_freq_1.5_Hz_ws_40', 'acc_phone_x_freq_1.7_Hz_ws_40', 'gyr_phone_x_max_freq', 'mag_phone_z_freq_1.0_Hz_ws_40', 'gyr_phone_z_freq_0.5_Hz_ws_40', 'gyr_phone_z_freq_1.9_Hz_ws_40', 'mag_phone_z_freq_0.3_Hz_ws_40', 'gyr_phone_x_freq_0.9_Hz_ws_40', 'acc_phone_y_freq_0.5_Hz_ws_40', 'acc_phone_x_freq_0.3_Hz_ws_40', 'mag_phone_y_freq_0.2_Hz_ws_40', 'gyr_phone_x_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.8_Hz_ws_40', 'gyr_phone_z_temp_mean_ws_120', 'gyr_phone_z_temp_std_ws_120', 'gyr_phone_x_temp_std_ws_120', 'acc_phone_y_freq_1.4_Hz_ws_40', 'gyr_phone_y_max_freq', 'gyr_phone_x_freq_weighted', 'mag_phone_y_temp_mean_ws_120', 'gyr_phone_z_pse', 'acc_phone_y_freq_0.3_Hz_ws_40', 'gyr_phone_z_freq_0.2_Hz_ws_40', 'gyr_phone_z_freq_0.4_Hz_ws_40', 'acc_phone_y_freq_0.9_Hz_ws_40', 'gyr_phone_y_freq_0.0_Hz_ws_40', 'acc_phone_y_freq_weighted', 'mag_phone_y_freq_0.6_Hz_ws_40', 'acc_phone_z_freq_1.6_Hz_ws_40']
 #'acc_phone_y_freq_0.0_Hz_ws_40', 'press_phone_pressure_temp_mean_ws_120', 'gyr_phone_x_temp_std_ws_120',
@@ -183,6 +184,7 @@ for i in range(0, len(possible_feature_sets)):
     performance_te_svm = 0
 
     for repeat in range(0, repeats):
+	print repeat
         class_train_y, class_test_y, class_train_prob_y, class_test_prob_y = learner.feedforward_neural_network(selected_train_X, train_y, selected_test_X, gridsearch=True)
         performance_tr_nn += eval.accuracy(train_y, class_train_y)
         performance_te_nn += eval.accuracy(test_y, class_test_y)
